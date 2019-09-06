@@ -7,6 +7,41 @@
   outline: none;
   box-sizing: border-box;
 }
+
+header{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+  width: 100%;
+}
+header div{
+  width:33.33%;
+}
+
+header .carrito{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+header .carrito .carrit{
+  margin:0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+header .hamburguesa{
+  display: flex;
+  align-items: center;
+}
+header .hamburguesa i{
+  margin-left: 25%;
+}
+header nav {
+  display: none;
+}
+.logo a img{
+  width: 100%;
+}
 section.banner {
   display: block;
   height: 3vh;
