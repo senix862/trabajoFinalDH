@@ -7,25 +7,43 @@
   outline: none;
   box-sizing: border-box;
 }
-
+body{
+  background: url(../img/fondo.jpg)no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
 header{
+  background: url(../img/fondo.jpg)no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
   display: flex;
   justify-content: space-between;
-  margin-top: 2vh;
   width: 100%;
+  position: fixed;
+  z-index: 2;
+  height: 20vh;
 }
 header div{
   width:33.33%;
+  color:black;
 }
-
+main{
+  position: absolute;
+  top: 20vh;
+}
 header .carrito{
   display: flex;
   justify-content: space-between;
   align-items: center;
  }
 header .carrito .carrit{
+  font-size: 4vh;
   margin:0 auto;
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
 }
@@ -35,12 +53,26 @@ header .hamburguesa{
 }
 header .hamburguesa i{
   margin-left: 25%;
+  font-size: 5vh;
 }
 header nav {
   display: none;
 }
+.logo a{
+  margin-top: 2vh;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 .logo a img{
-  width: 100%;
+  width: 50%;
+}
+.logo a p{
+  color:black;
+  font-size: 3vh;
+  font-weight: bold;
 }
 div.container{
   text-align: center;
@@ -81,7 +113,7 @@ a.ver-categoria {
   color: white;
   background-color:rgba(193, 149, 179, 0.8);
   text-align: center;
-  width: 25%;
+  width: 30%;
   margin: auto;
   top: 10%;
   right: 0;
