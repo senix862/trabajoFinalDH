@@ -42,8 +42,11 @@ header nav {
 .logo a img{
   width: 100%;
 }
+div.container{
+  text-align: center;
+}
 section.banner {
-  display: block;
+  display: inline-block;
   height: 3vh;
   position: relative;
 }
@@ -59,4 +62,31 @@ h1{
   left: 7.5%;
   border: solid black 3px;
   padding: 6vh;
+}
+
+div.photo-container {
+  float: left;
+  position: relative;
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.foto {
+  width: 100%;
+}
+
+a.ver-categoria {
+  position: absolute;
+  color: white;
+  background-color:rgba(193, 149, 179, 0.8);
+  text-align: center;
+  width: 25%;
+  margin: auto;
+  top: 10%;
+  right: 0;
+  left: 0;
+  padding: 8px;
+  text-transform: uppercase;
+  border-radius: 10px;
 }
