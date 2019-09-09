@@ -7,13 +7,15 @@
   outline: none;
   box-sizing: border-box;
 }
+
 body{
-  background: url(../img/fondo.jpg)no-repeat center center fixed;
+  /*background: url(../img/fondo.jpg)no-repeat center center fixed;*/
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
 }
+
 header{
   background: url(../img/fondo.jpg)no-repeat center center fixed;
 -webkit-background-size: cover;
@@ -27,19 +29,23 @@ background-size: cover;
   z-index: 2;
   height: 20vh;
 }
+
 header div{
   width:33.33%;
   color:black;
 }
+
 .cuerpo{
   position: absolute;
   top: 20vh;
 }
+
 header .carrito{
   display: flex;
   justify-content: space-between;
   align-items: center;
  }
+
 header .carrito .carrit{
   font-size: 4vh;
   margin:0 auto;
@@ -47,17 +53,21 @@ header .carrito .carrit{
   display: flex;
   justify-content: space-between;
 }
+
 header .hamburguesa{
   display: flex;
   align-items: center;
 }
+
 header .hamburguesa i{
   margin-left: 25%;
   font-size: 5vh;
 }
+
 header .hamburguesa nav {
   display: none;
 }
+
 .logo a{
   margin-top: 2vh;
   height: 80%;
@@ -66,26 +76,32 @@ header .hamburguesa nav {
   justify-content: space-around;
   align-items: center;
 }
+
 .logo a img{
   width: 50%;
 }
+
 .logo a p{
   color:black;
   font-size: 3vh;
   font-weight: bold;
 }
+
 div.container{
   text-align: center;
 }
+
 section.banner {
   display: inline-block;
   height: 3vh;
   position: relative;
 }
+
 .banner img{
   width: 100%;
   height: 25vh;
 }
+
 h1{
   text-align: center;
   width: 85%;
@@ -113,15 +129,22 @@ a.ver-categoria {
   color: white;
   background-color:rgba(193, 149, 179, 0.8);
   text-align: center;
-  width: 30%;
+  width: 90%;
   margin: auto;
-  top: 10%;
+  top: 80%;
   right: 0;
   left: 0;
   padding: 8px;
   text-transform: uppercase;
   border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
 }
+
+.newsletter-redesSociales{
+  padding: 0;
+  border-bottom:gray 1px solid;
+}
+
 .redesSociales{
   margin-left: 15%;
   width: 70%;
@@ -129,37 +152,56 @@ a.ver-categoria {
   justify-content: space-between;
   font-size: 7vh;
 }
+
+h5{
+  font-family: 'Quicksand', sans-serif;
+}
+
+
 .redesSociales a{
   text-decoration: none;
   color: rgb(165, 96, 143);
 }
+
 footer{
   margin-top: 5vh;
 }
+
 footer p{
   display: block;
 }
+
+.footer-Sociales{
+  margin: 15px auto 5px;
+}
+
 #subs{
-    text-decoration: none;
-    font-family: arial;
-    text-transform: uppercase;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 800;
-    font-size: 2vh;
-    color: black;
-    background-color:rgba(165, 96, 143,0.2);
-  }
-  #subs:hover{
-    background-color: rgba(0,0,0,0.2);
-    text-decoration: none;
-  }
+  text-decoration: none;
+  font-family: arial;
+  text-transform: uppercase;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 800;
+  font-size: 2vh;
+  color: black;
+  background-color:rgba(165, 96, 143,0.2);
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#subs:hover{
+  background-color: rgba(0,0,0,0.2);
+  text-decoration: none;
+
+}
 .cierre{
   margin-top: 5vh;
   margin-bottom: 2vh;
   margin-left: 5%;
 }
+
 .cierre a{
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
   color: black;
   display: flex;
@@ -168,6 +210,7 @@ footer p{
   margin-bottom: 3vh;
   font-weight: bold;
 }
+
 footer #volver{
   margin-right: 5%;
   font-size: 10vh;
@@ -175,4 +218,8 @@ footer #volver{
   color: rgb(165, 96, 143);
   display: flex;
   justify-content: flex-end;
+}
+
+#derechos p{
+  font-family: 'Quicksand', sans-serif;
 }
