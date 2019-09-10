@@ -92,6 +92,7 @@ div.container{
 }
 
 section.banner {
+  margin-top: 5px;
   display: inline-block;
   height: 3vh;
   position: relative;
@@ -218,8 +219,4 @@ footer #volver{
   color: rgb(165, 96, 143);
   display: flex;
   justify-content: flex-end;
-}
-
-#derechos p{
-  font-family: 'Quicksand', sans-serif;
 }
