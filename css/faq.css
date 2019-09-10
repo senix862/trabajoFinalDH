@@ -9,19 +9,18 @@
 }
 
 body{
-  /*background: url(../img/fondo.jpg)no-repeat center center fixed;*/
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 header{
   background-color: rgb(255, 199, 236);
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -112,44 +111,52 @@ h1{
   padding: 6vh;
 }
 
-
-/*-- Campos a llenar -- */
-label {
+div.photo-container {
   float: left;
+  position: relative;
   width: 100%;
-  margin-top: 12px;
-  padding: 4px;
-  font-family: 'Quicksand', sans-serif;
+  margin-top: 25px;
+  padding: 10px;
 }
 
-input {
-    border-radius: 10px;
-    border: 1px solid rgb(165, 96, 143);
-    line-height: 20px;
-    padding: 3px;
+.foto {
+  width: 100%;
 }
 
-button {
-  display:inline-block;
+a.ver-categoria {
+  position: absolute;
   color: white;
-  background-color:rgb(165, 96, 143);
+  background-color:rgba(193, 149, 179, 0.8);
   text-align: center;
-  width: 15%;
+  width: 35%;
   margin: auto;
+  top: 80%;
   right: 0;
   left: 0;
   padding: 8px;
+  text-transform: uppercase;
   border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
 }
 
-textarea {
-  border-radius: 10px;
-  border: 1px solid rgb(165, 96, 143);
-  line-height: 20px;
-  padding: 3px;
+/* AQUI VA LA PARTE DE PREGUNTAS */
+.preguntas{
+  line-height: 1.5em;
+  vertical-align: baseline;
+  border-bottom: gray 1px solid;
+  margin-bottom: 15px;
 }
 
+.preguntas p{
+  margin: 15px 0;
+  font-family: 'Quicksand', sans-serif;
+}
 
+.preguntas h3{
+  font-family: 'Patua One', cursive;
+}
+
+/* Footer y Redes sociales */
 .newsletter-redesSociales{
   padding: 0;
   border-bottom:gray 1px solid;
@@ -189,7 +196,6 @@ footer p{
   text-decoration: none;
   font-family: arial;
   text-transform: uppercase;
-  text-align: center;
   padding-left: 10px;
   padding-right: 10px;
   font-weight: 800;
@@ -198,7 +204,6 @@ footer p{
   background-color:rgba(165, 96, 143,0.2);
   margin-bottom: 10px;
   border-radius: 5px;
-  width: 27%;
 }
 
 #subs:hover{
@@ -230,8 +235,4 @@ footer #volver{
   color: rgb(165, 96, 143);
   display: flex;
   justify-content: flex-end;
-}
-
-#derechos p{
-  font-family: 'Quicksand', sans-serif;
 }
