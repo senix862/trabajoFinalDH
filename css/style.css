@@ -9,19 +9,18 @@
 }
 
 body{
-  /*background: url(../img/fondo.jpg)no-repeat center center fixed;*/
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 header{
   background-color: rgb(255, 199, 236);
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -92,7 +91,6 @@ div.container{
 }
 
 section.banner {
-  margin-top: 5px;
   display: inline-block;
   height: 3vh;
   position: relative;
