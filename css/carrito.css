@@ -144,53 +144,7 @@ h1{
   padding: 6vh;
 }
 
-div.photo-container {
-  float: left;
-  position: relative;
-  width: 100%;
-  margin-top: 25px;
-  padding: 10px;
-}
 
-.foto {
-  width: 100%;
-}
-
-a.ver-categoria {
-  position: absolute;
-  color: white;
-  background-color:rgba(193, 149, 179, 0.8);
-  text-align: center;
-  width: 35%;
-  margin: auto;
-  top: 80%;
-  right: 0;
-  left: 0;
-  padding: 8px;
-  text-transform: uppercase;
-  border-radius: 10px;
-  font-family: 'Quicksand', sans-serif;
-}
-
-/* AQUI VA LA PARTE DE PREGUNTAS */
-.preguntas{
-  line-height: 1.5em;
-  vertical-align: baseline;
-  border-bottom: gray 1px solid;
-  margin-bottom: 15px;
-}
-
-.preguntas p{
-  margin: 15px 0;
-  font-family: 'Quicksand', sans-serif;
-}
-
-.preguntas h3{
-  font-family: 'Patua One', cursive;
-  margin: 5px;
-}
-
-/* Footer y Redes sociales */
 .newsletter-redesSociales{
   padding: 0;
   border-bottom:gray 1px solid;
@@ -263,11 +217,11 @@ footer p{
 }
 
 #volver{
-  margin-right: 5%;
-  right: 5%;
-  bottom: 2.5%;
-  font-size: 5vh;
-  text-decoration: none;
-  color: rgba(165, 96, 143, 0.7);
-  position: fixed;
+    margin-right: 5%;
+    right: 5%;
+    bottom: 2.5%;
+    font-size: 5vh;
+    text-decoration: none;
+    color: rgba(165, 96, 143, 0.7);
+    position: fixed;
 }

@@ -12,15 +12,15 @@
     <!-- Esto es el HEADER -->
     <header>
       <div class="hamburguesa">
-        <i class="fas fa-bars"></i>
-        <nav>
+        <i class="fas fa-bars"><nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Preguntas Frecuentes</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html">Login</a></li>
           </ul>
-        </nav>
+        </nav></i>
+
       </div>
 
       <div class="logo">
@@ -32,8 +32,8 @@
 
       <div class="carrito">
         <div class="carrit">
-          <i class="fas fa-search"></i>
-          <i class="fas fa-shopping-basket"></i>
+          <a href="productos.html"><i class="fas fa-search"></i></a>
+          <a href="carrito.html"><i class="fas fa-shopping-basket"></i></a>
         </div>
       </div>
 
@@ -46,24 +46,24 @@
       <section class="banner">
         <div class="ban">
           <img src="img/banner.png" alt="BANNER">
-          <h1>Contacto</h1>
+          <h1>CONTACTO</h1>
         </div>
       <!-- Campos a llenar -->
     <label for="nombre">Nombre:</label>
     <br>
-    <input type="text" name="nombre" value="" required>
+    <input id="nombre" type="text" name="nombre" value=""required>
     <br>
     <label for="email">E-mail:</label>
     <br>
-    <input type="email" name="email" value="" required>
+    <input id="email" type="email" name="email" value=""required>
     <br>
     <label for="tel">Teléfono (opcional): </label>
     <br>
-    <input type="number" name="tel" value="">
+    <input id="tel" type="number" name="tel" value="">
     <br>
     <label for="mensaje">Mensaje:</label>
     <br>
-    <textarea name="mensaje" rows="15" cols="40" required></textarea>
+    <textarea id="mensaje" name="mensaje" rows="15" cols="40"required></textarea>
     <br>
     <button type="submit" name="button">Enviar</button>
 
@@ -87,12 +87,13 @@
       </section>
       <div class="cierre">
           <a href="contacto.html">CONTACTO</a>
-          <a href="#">PREGUNTAS FRECUENTES</a>
+          <a href="faq.html">PREGUNTAS FRECUENTES</a>
       </div>
-      <a id="volver" href="#"><i class="fas fa-sort-up"></i></a>
+
     </footer>
 
   </div>
   </div>
+  <a id="volver" href="#"><i class="fas fa-arrow-circle-up"></i></a>
   </body>
 </html>

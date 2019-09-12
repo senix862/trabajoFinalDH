@@ -77,15 +77,14 @@ header .hamburguesa nav {
   border-right: solid black 2px;
   max-height: 0;
   overflow: hidden;
-  transition: .2s;
+  transition: 1s;
 }
 header .hamburguesa i:hover nav {
   max-height: 1000px;
   overflow: visible;
-  transition: 1s;
 }
 header nav ul li {
-  padding-left: 12%;
+  padding-left: 8.3325%;
   padding-right: 2%;
   padding-bottom: 1vh;
   transition: .5s;
@@ -143,54 +142,47 @@ h1{
   border: solid black 3px;
   padding: 6vh;
 }
+/* Campos a llenar */
 
-div.photo-container {
+label {
   float: left;
-  position: relative;
   width: 100%;
-  margin-top: 25px;
-  padding: 10px;
+  margin-top: 12px;
+  padding: 4px;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.foto {
-  width: 100%;
+input {
+    border-radius: 10px;
+    border: 1px solid rgb(165, 96, 143);
+    line-height: 20px;
+    padding: 3px;
 }
-
-a.ver-categoria {
-  position: absolute;
+button {
   color: white;
-  background-color:rgba(193, 149, 179, 0.8);
+  background-color:rgb(165, 96, 143);
   text-align: center;
-  width: 35%;
-  margin: auto;
-  top: 80%;
+  width: 28%;
+  margin: 10px;
   right: 0;
   left: 0;
   padding: 8px;
-  text-transform: uppercase;
   border-radius: 10px;
   font-family: 'Quicksand', sans-serif;
 }
 
-/* AQUI VA LA PARTE DE PREGUNTAS */
-.preguntas{
-  line-height: 1.5em;
-  vertical-align: baseline;
-  border-bottom: gray 1px solid;
-  margin-bottom: 15px;
+textarea {
+  border-radius: 10px;
+  border: 1px solid rgb(165, 96, 143);
+  line-height: 20px;
+  padding: 3px;
 }
-
-.preguntas p{
-  margin: 15px 0;
-  font-family: 'Quicksand', sans-serif;
+main .datos a{
+  display: block;
+  margin-top: .4vh;
+  color: grey;
+  text-decoration: underline;
 }
-
-.preguntas h3{
-  font-family: 'Patua One', cursive;
-  margin: 5px;
-}
-
-/* Footer y Redes sociales */
 .newsletter-redesSociales{
   padding: 0;
   border-bottom:gray 1px solid;
@@ -263,11 +255,11 @@ footer p{
 }
 
 #volver{
-  margin-right: 5%;
-  right: 5%;
-  bottom: 2.5%;
-  font-size: 5vh;
-  text-decoration: none;
-  color: rgba(165, 96, 143, 0.7);
-  position: fixed;
+    margin-right: 5%;
+    right: 5%;
+    bottom: 2.5%;
+    font-size: 5vh;
+    text-decoration: none;
+    color: rgba(165, 96, 143, 0.7);
+    position: fixed;
 }
