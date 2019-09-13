@@ -144,6 +144,46 @@ h1{
   padding: 6vh;
 }
 
+/* ---- Carrito de Compras -----*/
+
+.main-productos{
+  overflow: hidden;
+}
+
+.main-productos h2{
+  background-color:rgb(165, 96, 143);
+  border-radius: 10px;
+  width: 70%;
+  margin: auto;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.main-productos h4{
+  float: left;
+  margin: 2% 6.5%;
+}
+
+.main-productos p{
+  float: left;
+  margin: 0 7%;
+}
+
+
+button {
+  color: white;
+  background-color:rgb(165, 96, 143);
+  text-align: center;
+  width: 28%;
+  margin: 10px;
+  right: 0;
+  left: 0;
+  padding: 8px;
+  border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*FOOTER*/
 
 .newsletter-redesSociales{
   padding: 0;
