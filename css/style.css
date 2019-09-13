@@ -147,7 +147,9 @@ h1{
 div.photo-container {
   float: left;
   position: relative;
-  width: 100%;
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
   margin-top: 25px;
   padding: 10px;
 }
