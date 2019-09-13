@@ -144,7 +144,6 @@ h1{
   padding: 6vh;
 }
 
-
 /*-- Campos a llenar -- */
 label {
   float: left;
@@ -175,6 +174,8 @@ button {
 }
 
 textarea {
+  width: 75%;
+  height: 40vh;
   border-radius: 10px;
   border: 1px solid rgb(165, 96, 143);
   line-height: 20px;
@@ -267,3 +268,21 @@ footer p{
 #derechos p{
   font-family: 'Quicksand', sans-serif;
 }
+/*media queries*/
+@media (min-width:768px) {
+  .container{
+    max-width: 720px;
+  }
+  div.logo a img{
+    max-width: 80px;
+  }
+  div.photo-container {
+    float: left;
+    width: 48%;
+  }
+
+  @media (min-width:1200px) {
+    .container{
+      max-width:1180px;
+      margin: auto;
+    }

@@ -252,3 +252,21 @@ footer p{
     color: rgba(165, 96, 143, 0.7);
     position: fixed;
 }
+
+/*media queries*/
+@media (min-width:768px) {
+  .container{
+    max-width: 720px;
+  }
+  div.logo a img{
+    max-width: 80px;
+  }
+  div.photo-container {
+    float: left;
+    width: 48%;
+  }
+
+  @media (min-width:1200px) {
+    .container{
+      width:100%;
+    }
