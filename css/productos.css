@@ -102,21 +102,20 @@ header nav ul li:hover {
 }
 .logo a{
   margin-top: 2vh;
-  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-div.logo a img{
-  width: 35%;
-  margin-top: 7%;
+.logo a img{
+  width: 65px;
 }
 
 .logo a p{
+  margin-top: 3px;
   color:black;
-  font-size: 3vh;
+  font-size: 13px;
   font-weight: bold;
 }
 /*Body*/
@@ -276,9 +275,7 @@ footer p{
   .container{
     max-width: 720px;
   }
-  div.logo a img{
-    max-width: 80px;
-  }
+
   div.photo-container {
     float: left;
     width: 48%;
