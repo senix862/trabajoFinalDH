@@ -38,6 +38,7 @@ header div{
 .cuerpo{
   position: absolute;
   top: 20vh;
+  width: 100%;
 }
 
 header .carrito{
@@ -68,7 +69,7 @@ header .hamburguesa i{
 }
 header .hamburguesa nav {
   position: absolute;
-  top: 19.8vh;
+  top: 19.6vh;
   left: 0;
   text-align: initial;
   font-size: 4vh;
@@ -97,6 +98,7 @@ header nav ul li a{
   color: black;
   font-weight: bold;
 }
+
 header nav ul li:hover {
   background: rgb(165, 96, 143);
 }
@@ -122,6 +124,7 @@ header nav ul li:hover {
 
 div.container{
   text-align: center;
+  width: 100%;
 }
 
 section.banner {
@@ -145,6 +148,69 @@ h1{
   padding: 6vh;
 }
 
+/* ---- Carrito de Compras -----*/
+.caracteristicas{
+  width: 81%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 9.5%;
+
+}
+.productos{
+  display: flex;
+  justify-content: space-between;
+  text-align: initial;
+  width:81%;
+  margin-left: 9.5%;
+}
+
+.main-productos{
+  overflow: hidden;
+  margin-bottom: 4vh;
+}
+
+.main-productos h2{
+  background-color:rgb(165, 96, 143);
+  border-radius: 10px;
+  width: 70%;
+  margin: auto;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+}
+
+.main-productos h4{
+  /* float: left; */
+  /* margin-right: 6.7%; */
+}
+.main-productos h4.num{
+  margin-left: 10%;
+}
+.main-productos h4.num#cantidad{
+  margin-left: 12%;
+}
+/* .main-productos p{
+  float: left;
+  margin: 0 7%;
+  text-align: center;
+} */
+
+
+button {
+  color: white;
+  background-color:rgb(165, 96, 143);
+  text-align: center;
+  width: 28%;
+  margin: 10px;
+  right: 0;
+  left: 0;
+  padding: 8px;
+  border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*FOOTER*/
 
 .newsletter-redesSociales{
   padding: 0;
@@ -225,4 +291,39 @@ footer p{
     text-decoration: none;
     color: rgba(165, 96, 143, 0.7);
     position: fixed;
+}
+
+@media (min-width:768px) {
+  .container{
+    max-width: 720px;
+  }
+  header{
+    height: 28vh;
+  }
+  .cuerpo{
+    top:28vh;
+  }
+  header .hamburguesa nav {
+    top: 27.6vh;
+  }
+  .main-productos h4.num#cantidad{
+    margin-left: 27%;
+  }
+}
+@media (min-width:1024px) {
+  .container{
+    max-width: 1024px;
+  }
+  header{
+    height: 36vh;
+  }
+  .cuerpo{
+    top:36vh;
+  }
+  header .hamburguesa nav {
+    top: 35.6vh;
+  }
+  .main-productos h4.num#cantidad{
+    margin-left: 27%;
+  }
 }

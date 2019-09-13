@@ -38,6 +38,7 @@ header div{
 .cuerpo{
   position: absolute;
   top: 20vh;
+  width: 100%;
 }
 
 header .carrito{
@@ -68,7 +69,7 @@ header .hamburguesa i{
 }
 header .hamburguesa nav {
   position: absolute;
-  top: 19.8vh;
+  top: 19.6vh;
   left: 0;
   text-align: initial;
   font-size: 4vh;
@@ -97,9 +98,11 @@ header nav ul li a{
   color: black;
   font-weight: bold;
 }
+
 header nav ul li:hover {
   background: rgb(165, 96, 143);
 }
+
 .logo a{
   margin-top: 2vh;
   display: flex;
@@ -121,6 +124,7 @@ header nav ul li:hover {
 
 div.container{
   text-align: center;
+  width: 100%;
 }
 
 section.banner {
@@ -143,11 +147,15 @@ h1{
   border: solid black 3px;
   padding: 6vh;
 }
-
+.productos{
+  overflow: hidden;
+}
 div.photo-container {
   float: left;
   position: relative;
-  width: 100%;
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
   margin-top: 25px;
   padding: 10px;
 }
@@ -255,15 +263,23 @@ footer p{
 
 /*media queries*/
 @media (min-width:768px) {
-  .container{
-    max-width: 720px;
-  }
   div.photo-container {
     float: left;
     width: 48%;
   }
 
-  @media (min-width:1200px) {
-    .container{
-      width:100%;
+  @media (min-width:1024px) {
+    header{
+      height: 27vh;
+    }
+    .cuerpo{
+      top:27vh;
+    }
+    header .hamburguesa nav {
+      top: 26.7vh;
+    }
+    div.photo-container {
+      float: left;
+      width: 32%;
+      margin-left: 12%;
     }
