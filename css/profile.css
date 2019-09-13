@@ -175,7 +175,7 @@ a.ver-categoria {
 }
 
 .img-background img{
-  margin: auto;
+  margin-left: 25%;
   border-radius: 100%;
   width: 200px;
   height: 200px;
@@ -195,6 +195,7 @@ a.ver-categoria {
 }
 
 h2{
+  margin-left: 25%;
   font-family: 'Quicksand', sans-serif;
 }
 h3{
@@ -220,6 +221,7 @@ h3{
 
 h5{
   font-family: 'Quicksand', sans-serif;
+  margin-left: 25%;
 }
 
 
