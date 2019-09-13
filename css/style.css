@@ -98,9 +98,11 @@ header nav ul li a{
   color: black;
   font-weight: bold;
 }
+
 header nav ul li:hover {
   background: rgb(165, 96, 143);
 }
+
 .logo a{
   margin-top: 2vh;
   height: 80%;

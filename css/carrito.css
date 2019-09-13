@@ -38,6 +38,7 @@ header div{
 .cuerpo{
   position: absolute;
   top: 20vh;
+  width: 100%;
 }
 
 header .carrito{
@@ -97,9 +98,11 @@ header nav ul li a{
   color: black;
   font-weight: bold;
 }
+
 header nav ul li:hover {
   background: rgb(165, 96, 143);
 }
+
 .logo a{
   margin-top: 2vh;
   height: 80%;
@@ -121,6 +124,7 @@ header nav ul li:hover {
 
 div.container{
   text-align: center;
+  width: 100%;
 }
 
 section.banner {
