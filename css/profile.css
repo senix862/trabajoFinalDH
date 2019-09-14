@@ -142,6 +142,10 @@ h1{
 
 /* AQUI VA LA PARTE DEL PERFIL */
 
+.main-profile{
+
+}
+
 .img-background{
   overflow: hidden;
 }
@@ -157,14 +161,14 @@ h1{
 }
 
 /* Esto es para el boton de editar y agregarlo a la imagen.*/
-#pencil {
+/*#pencil {
   z-index: 1;
   float: right;
   margin-right: 35%;
   border-radius: 100%;
   background-color: #e0e0d1;
   padding: 8px;
-}
+}*/
 
 h2{
   margin-top: 15px;
@@ -225,6 +229,7 @@ footer p{
 }
 
 .footer-Sociales{
+  text-align: center;
   margin: 15px auto 5px;
 }
 
