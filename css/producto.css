@@ -38,7 +38,6 @@ header div{
 .cuerpo{
   position: absolute;
   top: 20vh;
-  width: 100%;
 }
 
 header .carrito{
@@ -147,52 +146,35 @@ h1{
   border: solid black 3px;
   padding: 6vh;
 }
-.productos{
-  overflow: hidden;
-}
-div.photo-container {
-  float: left;
-  position: relative;
-  width: 98%;
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-top: 25px;
-  padding: 10px;
-}
 
-.foto {
-  width: 100%;
-}
-
-a.ver-categoria {
-  position: absolute;
-  color: white;
-  background-color:rgba(193, 149, 179, 0.8);
-  text-align: center;
-  width: 35%;
-  margin: auto;
-  top: 80%;
-  right: 0;
-  left: 0;
-  padding: 8px;
-  text-transform: uppercase;
-  border-radius: 10px;
-  font-family: 'Quicksand', sans-serif;
-}
 
 /*---------Propiedades del ITEM---------*/
 .item-info{
   padding: 10px;
 }
 
+button {
+  color: white;
+  background-color:rgb(165, 96, 143);
+  text-align: center;
+  width: 28%;
+  max-width: 200px;
+  margin: 5px;
+  right: 0;
+  left: 0;
+  padding: 8px;
+  border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
 .item-price{
-  text-align: left;
+  text-align: center;
   font-size: 25px;
   font-family: 'Quicksand', sans-serif;
 }
 
 .item-name{
-  text-align: left;
+  text-align: center;
   font-size: 15px;
   font-family: 'Quicksand', sans-serif;
 }
@@ -230,6 +212,8 @@ a.ver-categoria {
   width: 66%;
   font-family: 'Quicksand', sans-serif;
 }
+
+
 
 /* ------- FOOTER ---------- */
 
@@ -316,11 +300,16 @@ footer p{
 
 /*media queries*/
 @media (min-width:768px) {
-  div.photo-container {
-    float: left;
-    width: 48%;
+  .item-info{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
-
+  .item-optionals{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
   @media (min-width:1024px) {
     header{
       height: 27vh;
@@ -331,8 +320,13 @@ footer p{
     header .hamburguesa nav {
       top: 26.7vh;
     }
-    div.photo-container {
-      float: left;
-      width: 32%;
-      margin-left: 12%;
+    .item-info{
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+    .item-optionals{
+      width: 50%;
+      margin-left: 25%;
+      margin-right: 25%;
     }
