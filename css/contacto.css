@@ -231,6 +231,7 @@ footer p{
   margin-bottom: 10px;
   border-radius: 5px;
   width: 33%;
+  max-width: 150px;
 }
 
 #subs:hover{

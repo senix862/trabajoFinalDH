@@ -163,6 +163,7 @@ button {
   background-color:rgb(165, 96, 143);
   text-align: center;
   width: 28%;
+  max-width: 200px;
   margin: 10px;
   right: 0;
   left: 0;

@@ -144,34 +144,6 @@ h1{
   padding: 6vh;
 }
 
-div.photo-container {
-  float: left;
-  position: relative;
-  width: 100%;
-  margin-top: 25px;
-  padding: 10px;
-}
-
-.foto {
-  width: 100%;
-}
-
-a.ver-categoria {
-  position: absolute;
-  color: white;
-  background-color:rgba(193, 149, 179, 0.8);
-  text-align: center;
-  width: 35%;
-  margin: auto;
-  top: 80%;
-  right: 0;
-  left: 0;
-  padding: 8px;
-  text-transform: uppercase;
-  border-radius: 10px;
-  font-family: 'Quicksand', sans-serif;
-}
-
 /* AQUI VA LA PARTE DE PREGUNTAS */
 .main-content{
   width: 80%;

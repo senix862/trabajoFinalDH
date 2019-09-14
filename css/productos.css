@@ -283,6 +283,10 @@ footer p{
 
   @media (min-width:1200px) {
     .container{
-      max-width:1180px;
       margin: auto;
+    }
+    div.photo-container {
+      float: left;
+      width: 30%;
+      margin-left: 1.8%;
     }
