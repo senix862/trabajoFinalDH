@@ -184,6 +184,11 @@ main .datos a{
   color: grey;
   text-decoration: underline;
 }
+
+div .datos .errores{
+  margin-top: 2vh;
+}
+
 .newsletter-redesSociales{
   padding: 0;
   border-bottom:gray 1px solid;

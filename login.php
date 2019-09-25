@@ -1,3 +1,22 @@
+<?php
+require_once('funciones/autoload.php');
+
+$email="";
+$password="";
+
+$errores=[
+  "email" => "",
+  "password" => ""
+];
+if($_POST){
+$email=trim($_POST["email"]);
+$errores=validarLogin($_POST);
+
+// if (!$errores){
+//   header("location:profile.php");
+// }
+}
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -53,17 +72,26 @@
         </div>
       <!-- AQUI DENTRO VA EL CONTENIDO A AGREGAR -->
         <div class="datos">
-          <label for="email">E-mail:</label>
-          <br>
-          <input id="email" type="email" name="email" value="" required>
-          <br>
-          <label for="password">Contraseña:</label>
-          <br>
-          <input id="password" type="password" name="password" value="" required>
-          <a href="#">olvidé mi contraseña</a>
-          <br>
-          <button type="submit" name="button">Ingresar</button>
-          <a href="registro.html">Registrarme</a>
+          <form class="" action="login.php" method="post">
+            <label for="email">E-mail:</label>
+            <br>
+            <input id="email" type="text" name="email" value="<?= $email?>" required>
+
+            <div class="errores">
+              <?= (isset($errores["email"]) ? $errores["email"] : "")?>
+            </div>
+            <label for="password">Contraseña:</label>
+            <br>
+            <input id="password" type="password" name="password" value="" required>
+            <div class="errores">
+              <?= (isset($errores["password"]) ? $errores["password"] : "")?>
+            </div>
+
+            <a href="#">olvidé mi contraseña</a>
+            <br>
+            <button type="submit" name="button">Ingresar</button>
+          </form>
+            <a href="registro.html">Registrarme</a>
         </div>
     </main>
       <!-- Inicio Footer -->
