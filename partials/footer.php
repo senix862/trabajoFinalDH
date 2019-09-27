@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/footer.css">
 <footer>
   <section class="newsletter-redesSociales">
     <!-- Redes Sociales -->

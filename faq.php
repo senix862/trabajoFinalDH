@@ -10,10 +10,10 @@
     <title>Preguntas Frecuentes - Joyas y Bijouterie</title>
   </head>
   <body>
-          <!-- Header -->
-    <?php require_once('partials/header.php') ?>
-      <!-- CONTENIDO -->
     <div class="container">
+      <!-- Header -->
+      <?php require_once('partials/header.php') ?>
+      <!-- CONTENIDO -->
       <div class="cuerpo">
       <!-- Arranca el main-->
     <main>
