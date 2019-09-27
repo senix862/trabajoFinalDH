@@ -1,0 +1,114 @@
+header{
+  background-color: rgb(255, 199, 236);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  height: 85px;
+}
+
+header div{
+  width:33.33%;
+  color:black;
+}
+
+header .carrito{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+header .carrito .carrit{
+  font-size: 4vh;
+  margin:0 auto;
+  width: 60%;
+  position: relative;
+}
+
+ .carrito a{
+  font-size: 20px;
+    color:black;
+    text-decoration: none;
+    position: absolute;
+    top: 38%;
+    right: 18%;
+}
+ .lupa a{
+  font-size: 20px;
+    color:black;
+    text-decoration: none;
+    position: absolute;
+    top: 38%;
+    right: 28%;
+}
+header .hamburguesa{
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+header .hamburguesa i{
+  margin-left: 20%;
+  margin-top: 20%;
+  font-size: 25px;
+}
+nav {
+    transition: .5s;
+}
+header .hamburguesa nav {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  text-align: initial;
+  font-size: 20px;
+  background-color: rgb(255, 199, 236);
+  max-height: 0;
+  overflow: hidden;
+}
+header .hamburguesa i:hover nav {
+  max-height: 1000px;
+  overflow: visible;
+    transition: 0.5s;
+
+}
+header nav ul li {
+  padding-left: 20%;
+  padding-right: 2%;
+  padding-bottom: 1vh;
+  transition: .3s;
+}
+
+header nav ul li a{
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+header nav ul li:hover {
+  background: rgb(165, 96, 143);
+}
+.logo a{
+  display: flex;
+  top: 5px;
+  left: 35%;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo a img{
+  width: 55px;
+}
+
+.logo a p{
+  text-align: center;
+  margin-top: 3px;
+  color:black;
+  font-size: 14px;
+  font-weight: bold;
+}
