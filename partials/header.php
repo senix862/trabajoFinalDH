@@ -15,7 +15,7 @@
       <ul>
         <?php
         foreach ($secciones as $seccion => $url) :?>
-          <li><a href="<?php $url?>"><?php= $seccion?></a></li>
+          <li><a href="<?php echo $url?>"><?php echo $seccion?></a></li>
         <?php endforeach; ?>
       </ul>
     </nav>
