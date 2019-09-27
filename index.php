@@ -14,7 +14,6 @@
       <?php require_once('partials/header.php') ?>
       <!-- CONTENIDO -->
       <div class="cuerpo">
-
       <!-- Arranca el main-->
       <main>
         <!-- Banner -->
@@ -24,48 +23,37 @@
             <h1>Novedades</h1>
           </div>
         </section>
-        <section class="novedades">
-
         <!-- Productos por categorías -->
-        </section>
-
         <section class="productos">
           <article class="aros">
     				<div class="photo-container">
     					<img class="foto" src="img/aros/arosZafiroAzul-art376.jpg" alt="art376">
-              <a class="ver-categoria" href="productos.html#verAros">Aros</a>
+              <a class="ver-categoria" href="productos.php#verAros">Aros</a>
     				</div>
           </article>
           <article class="dijes">
     				<div class="photo-container">
     					<img class="foto" src="img/dijes/rodoRedonda-art59.jpg" alt="art59">
-              <a class="ver-categoria" href="productos.html#verDijes">Dijes</a>
+              <a class="ver-categoria" href="productos.php#verDijes">Dijes</a>
     				</div>
           </article>
           <article class="pulseras">
             <div class="photo-container">
               <img class="foto" src="img/pulseras/pulsEsmeralda-art522.jpg" alt="art522">
-              <a class="ver-categoria" href="productos.html#verPulseras">Pulseras</a>
+              <a class="ver-categoria" href="productos.php#verPulseras">Pulseras</a>
             </div>
           </article>
           <article class="anillos">
             <div class="photo-container">
               <img class="foto" src="img/anillos/anilloAmatista-art255.jpg" alt="art255">
-              <a class="ver-categoria" href="productos.html#verAnillos">Anillos</a>
+              <a class="ver-categoria" href="productos.php#verAnillos">Anillos</a>
             </div>
           </article>
-          <!-- <article class="piedras-en-bruto">
-    				<div class="photo-container">
-    					<img class="foto" src="img/piedras-en-bruto/AzurritayMalaquita-bruto.jpg" alt="Azurr-en-bruto">
-              <a class="ver-categoria" href="productos.html">Piedras en bruto</a>
-    				</div>
-          </article> -->
-
         </section>
       </main>
-      <!-- Inicio Footer ADENTRO DEL CUERPO -->
-      <?php require('partials/footer.php') ?>
-    </div>
+      <!-- Footer -->
+        <?php require('partials/footer.php') ?>
+      </div>
     </div>
   </body>
 </html>

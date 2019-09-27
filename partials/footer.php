@@ -17,8 +17,8 @@
       </div>
   </section>
   <div class="cierre">
-      <a href="contacto.html">CONTACTO</a>
-      <a href="faq.html">PREGUNTAS FRECUENTES</a>
+      <a href="contacto.php">CONTACTO</a>
+      <a href="faq.php">PREGUNTAS FRECUENTES</a>
   </div>
 
 </footer>
