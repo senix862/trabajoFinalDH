@@ -1,3 +1,41 @@
+<?php
+
+
+
+$errorArchivo="";
+
+if($_POST){
+  // Acá ingresan los datos
+  $usuario=[
+    "nombre" => $_POST["nombre"],
+    "apellido" => $_POST["apellido"],
+    "nacimiento" => $_POST["date"],
+    "pais" => $_POST["pais"],
+    "email" => $_POST["email"]
+  ];
+  // Acá se sube la imagen
+  if ($_FILES["avatar"]["error"]===0) {
+    $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+    if ($ext != "png" && $ext != "jpg" && $ext !="jpeg") {
+      $errorArchivo= "Formato de archivo inválido";
+    }
+    $usuario["avatar"]= $_FILES["name"].$ext;
+    move_uploaded_file($_FILES["avatar"]["tmp_name"],"dataBase/".$_POST["email"]. $ext);
+    }
+
+  // Acá guardamos la contraseña
+  if ($_POST["password"] === $_POST["password2"]) {
+    $usuario["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
+  }
+  $usuarios= file_get_contents("dataBase/usuarios.json");
+  $usuariosArray= json_decode($usuarios,true);
+  $usuariosArray[]=$usuario;
+  $usuariosJSON= json_encode($usuariosArray);
+  file_put_contents("dataBase", $usuariosJSON);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -22,7 +60,7 @@
                   <h1>REGISTRARSE</h1>
                 </div>
               <!-- Campos a llenar -->
-              <form class="" action="" method="post" enctype="multipart/form-data">
+              <form class="" action="registro.php" method="post" enctype="multipart/form-data">
 
 
                 <label for="nombre">Nombre:</label>
@@ -36,6 +74,9 @@
                 <label for="avatar">Subir foto</label>
                 <input type="file"  id="avatar" name="avatar">
                 <br>
+                <?php
+                echo $errorArchivo;
+                 ?>
                 <label for="date">Fecha de nacimiento:</label>
                 <br>
                 <input id="date" type="date" name="date" value=""required>
