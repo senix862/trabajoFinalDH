@@ -32,7 +32,7 @@ function validarRegistro($datos, $password2, $terminos) {
         if (!$paises) {
             $errores['paises'] = 'Seleccione un país';
           }
-          if(empty($terminos)){
+          if(($terminos)!=1){
             $errores['terminos'] = 'Debe aceptar los términos y condiciones';
           }
     return $errores;

@@ -1,4 +1,6 @@
 <?php
+
+var_dump($_POST);
 //FALTA GUARDAR LOS CAMPOS AL INGRESAR UN CAMPO INCORRECTO; Y FALTA VALIDAR EL CHECK;
   $nombre = "";
   $apellido = "";
@@ -21,7 +23,7 @@ $errores=[
 ];
 
 if($_POST){
-  $terminos = '';
+ $terminos = "";
   if(isset($_POST['terminos'])){
     $terminos = $_POST['terminos'];
   }
@@ -152,7 +154,7 @@ if (empty($errores)) header("location:profile.php");
                 <input id="password2" type="password" name="password2" value="" >
                 <br>
                 <br>
-                <input class="check" type="checkbox" name="terminos" value="" > Acepto los <a href="#">Términos y condiciones</a>.
+                <input class="check" type="checkbox" name="terminos" value="1" > Acepto los <a href="#">Términos y condiciones</a>.
                 <br>
                 <?= $errores['terminos'] ?? '' ?>
                 <br>
