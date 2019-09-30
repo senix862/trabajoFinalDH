@@ -52,7 +52,7 @@
         </section>
       </main>
       <!-- Footer -->
-        <?php require('partials/footer.php') ?>
+        <?php require_once('partials/footer.php') ?>
       </div>
     </div>
   </body>
