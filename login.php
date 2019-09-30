@@ -1,5 +1,5 @@
 <?php
-/*require_once('funciones/autoload.php');*/
+require_once('funciones/autoload.php');
 
 $email="";
 $password="";
@@ -9,12 +9,12 @@ $errores=[
   "password" => ""
 ];
 if($_POST){
-$email=trim($_POST["email"]);
-$errores=validarLogin($_POST);
+  $email = trim($_POST["email"]);
+  $errores = validarLogin($_POST);
 
-// if (!$errores){
-//   header("location:profile.php");
-// }
+  // if (!$errores){
+  //   header("location:profile.php");
+  // }
 }
 ?>
 <!DOCTYPE html>
@@ -43,17 +43,17 @@ $errores=validarLogin($_POST);
         </div>
       <!-- AQUI DENTRO VA EL CONTENIDO A AGREGAR -->
         <div class="datos">
-          <form class="" action="profile.php" method="post">
+          <form class="" action="login.php" method="post">
             <label for="email">E-mail:</label>
             <br>
-            <input id="email" type="text" name="email" value="<?= $email?>" required>
+            <input id="email" type="text" name="email" value="<?= $email?>">
 
             <div class="errores">
               <?= (isset($errores["email"]) ? $errores["email"] : "")?>
             </div>
             <label for="password">Contraseña:</label>
             <br>
-            <input id="password" type="password" name="password" value="" required>
+            <input id="password" type="password" name="password" value="">
             <div class="errores">
               <?= (isset($errores["password"]) ? $errores["password"] : "")?>
             </div>
@@ -61,12 +61,11 @@ $errores=validarLogin($_POST);
               <input type="checkbox" id="cookie" name="" value="">
               <label for="cookie">Mantenerme Conectado</label>
             </div>
-            </form>
             <a href="#">olvidé mi contraseña</a>
             <br>
             <button type="submit" name="button">Ingresar</button>
           </form>
-            <a href="registro.html">Registrarme</a>
+            <a href="registro.php">Registrarme</a>
         </div>
     </main>
     <!-- Inicio Footer ADENTRO DEL CUERPO -->

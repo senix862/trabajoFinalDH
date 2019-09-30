@@ -7,27 +7,34 @@ function validarLogin($datos) {
     $password = $datos['password'];
 
     if (strlen($email) === 0) {
-        $errores['email'] = 'Escribe el email';
+        $errores['email'] = 'Escriba su email';
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errores['email'] = 'El e-mail no es válido';
     }
-    if (strlen($password) < 8) {
-        $errores['password'] = 'La contraseña es muy corta (minimo 8 caracteres)';
-    }
-    $usuario= file_get_contents("usuarios.json");
-    $usuarios=json_decode($usuario, true);
+    if (strlen($password) === 0) {
+          $errores['password'] = 'Ingrese su contraseña';
+        }
+    if (empty($errores['email']) && empty($errores['password'])) {
+        $usuario = file_get_contents('dataBase/usuarios.json');
+        //lo transformo a variables en php
+        $usuarios = json_decode($usuario, true);
 
-    foreach ($usuarios as $user) {
-      if ($user["email"] == $email && password_verify($user["email"], $password)) {
-        $_SESSION["email"] = $email;
-        $_SESSION["avatar"] = $user["avatar"];
-
-        header('location:profile.php');
-      }
-    }
-    //deberia de buscar al usuario en la base de datos
+        foreach ($usuarios as $usuario) {
+          if ($usuario["email"] == $email && password_verify($password, $usuario["password"])) {
+            //aqui encontré al usuario y lo logueo
+            $_SESSION["email"] = $email;
+            $_SESSION["avatar"] = $usuario["avatar"];
+            //pregunto si envie el mantenerme logeado
+            if(isset($_POST['mantenerme'])) {
+              //creo una cookie que va a durar 30 dias
+              setcookie('email', $email, time() + 60*60*24*30);
+            }
+            header('location:profile.php');
+          }
+        }
+        //deberia de buscar al usuario en la base de datos
         //y si no esta lanzar un error
-
-
-    return $errores['email'] = "Usuario o clave incorrectos";
+        $errores['email'] = "Usuario o clave incorrectos";
+      }
+    return $errores;
 }
