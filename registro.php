@@ -1,35 +1,9 @@
 <?php
-<<<<<<< HEAD
   $nombre = "";
   $apellido = "";
   $email = "";
 
   require_once('partials/paises.php');
-
-  if($_POST){
-    $nombre = $_POST["nombre"];
-    $apellido = $_POST["apellido"];
-    $email = $_POST["email"];
-  }
-/*
-  $adventencia = ["No llenaste el nombre", "No llenaste el apellido", "No llenaste el apellido"];
-
-  if($_POST){
-    if (strlen($_POST["nombre"]) == 0) {
-      echo $adventencia[0];
-    }
-    if (strlen($_POST["apellido"]) == 0) {
-      echo $adventencia[1];
-    }
-    if (cstrlen($_POST["email"]) == 0) {
-      echo $adventencia[2];
-    }
-*/
-
- ?>
-=======
-
-
 
 $errorArchivo="";
 
@@ -38,7 +12,6 @@ if($_POST){
   $usuario=[
     "nombre" => $_POST["nombre"],
     "apellido" => $_POST["apellido"],
-    "nacimiento" => $_POST["date"],
     "pais" => $_POST["pais"],
     "email" => $_POST["email"]
   ];
@@ -48,23 +21,22 @@ if($_POST){
     if ($ext != "png" && $ext != "jpg" && $ext !="jpeg") {
       $errorArchivo= "Formato de archivo inválido";
     }
-    $usuario["avatar"]= $_FILES["name"].$ext;
-    move_uploaded_file($_FILES["avatar"]["tmp_name"],"dataBase/".$_POST["email"]. $ext);
+    $usuario["avatar"]= $_FILES["avatar"]["name"].$ext;
+    move_uploaded_file($_FILES["avatar"]["tmp_name"],"dataBase/avatarIMG/".$_POST["nombre"] . "." . $ext);
     }
 
   // Acá guardamos la contraseña
   if ($_POST["password"] === $_POST["password2"]) {
     $usuario["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
   }
-  $usuarios= file_get_contents("dataBase/usuarios.json");
+  file_put_contents("dataBase/usuarios.json", $usuario, FILE_APPEND | LOCK_EX);
+  $usuarios = file_get_contents("dataBase/usuarios.json");
   $usuariosArray= json_decode($usuarios,true);
   $usuariosArray[]=$usuario;
   $usuariosJSON= json_encode($usuariosArray);
-  file_put_contents("dataBase", $usuariosJSON);
 }
 
 ?>
->>>>>>> cee3533d68d87ccc600035f176f995982735750b
 
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -90,13 +62,9 @@ if($_POST){
                   <h1>REGISTRARSE</h1>
                 </div>
               <!-- Campos a llenar -->
-<<<<<<< HEAD
               <form class="" action="" method="post" enctype="multipart/form-data">
-=======
               <form class="" action="registro.php" method="post" enctype="multipart/form-data">
 
-
->>>>>>> cee3533d68d87ccc600035f176f995982735750b
                 <label for="nombre">Nombre:</label>
                 <br>
                 <input type="text" name="nombre" value="<?=$nombre?>" required>
