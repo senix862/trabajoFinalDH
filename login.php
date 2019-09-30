@@ -43,7 +43,7 @@ $errores=validarLogin($_POST);
         </div>
       <!-- AQUI DENTRO VA EL CONTENIDO A AGREGAR -->
         <div class="datos">
-          <form class="" action="login.php" method="post">
+          <form class="" action="profile.php" method="post">
             <label for="email">E-mail:</label>
             <br>
             <input id="email" type="text" name="email" value="<?= $email?>" required>
@@ -57,7 +57,11 @@ $errores=validarLogin($_POST);
             <div class="errores">
               <?= (isset($errores["password"]) ? $errores["password"] : "")?>
             </div>
-
+            <div class="cookie">
+              <input type="checkbox" id="cookie" name="" value="">
+              <label for="cookie">Mantenerme Conectado</label>
+            </div>
+            </form>
             <a href="#">olvidé mi contraseña</a>
             <br>
             <button type="submit" name="button">Ingresar</button>
