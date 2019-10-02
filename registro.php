@@ -65,7 +65,7 @@ $password2 = $_POST["password2"];
           'commission' => 'tarde',
           'json_data' => $usuario,
         ];
-      $usuario = peticionCurl('http://apiusers.juancarlosdh.dhalumnos.com/api/users', 'POST', $datos);
+      // $usuario = peticionCurl('http://apiusers.juancarlosdh.dhalumnos.com/api/users', 'POST', $datos);
     }
 }
 if (empty($errores)) header("location:profile.php");

@@ -31,7 +31,7 @@
               <img src="https://rotary6690.org/wp-content/plugins/dacdbplus/img/no_image.jpg">
               <!-- <i id="pencil" class="fas fa-pencil-alt"></i> -->
             </div>
-            <h2>Homero J. Simpson</h2>
+            <h2>acá va el nombre del usuario</h2>
             <br>
             <h4> Email: amantedelacomida53@aol.com</h4>
             <br>

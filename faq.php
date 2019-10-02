@@ -29,7 +29,7 @@
           <article class="preguntas">
             <h3>¿Cómo comprar?</h3>
             <p>Tengo dudas sobre las especificaciones del producto, ¿qué hago?
-            Todas las especificaciones técnicas vitales de cada producto figuran en su detalle. Si aún así tenés dudas, podés dejarnos tu consulta utilizando el botón <a href="contacto.html">“Contacto”</a>. Uno de nuestros asesores de venta te responderá a la brevedad.
+            Todas las especificaciones técnicas vitales de cada producto figuran en su detalle. Si aún así tenés dudas, podés dejarnos tu consulta utilizando el botón <a href="contacto.php">“Contacto”</a>. Uno de nuestros asesores de venta te responderá a la brevedad.
             </p>
           </article>
           <article class="preguntas">

@@ -32,8 +32,7 @@
   </div>
 
   <div class="carrito">
-    <div class="carrit">
-      <a href="productos.php"><i class="fas fa-search"></i></a>
+
      <div class="lupa">
       <a href="productos.php"><i class="fas fa-search"></i></a>
     </div>
