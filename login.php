@@ -12,9 +12,6 @@ if($_POST){
   $email = trim($_POST["email"]);
   $errores = validarLogin($_POST);
 
-  // if (!$errores){
-  //   header("location:welcome.php");
-  // }
 }
 $textoBanner="Ingresar";
 ?>

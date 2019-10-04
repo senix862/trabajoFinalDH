@@ -35,20 +35,33 @@ $textoBanner="Mi Carrito";
                 <li>Anillo Amatista</li>
                 <li>Dije piedra Luna</li>
                 <li>Aros Cuarzo</li>
+                <br>
+                <li>TOTAL</li>
               </ul>
             </article>
           <article class="cantidad">
             <ul>
+              <button class="masmenos" type="submit" name="masmenos">-</button>
               <li>2</li>
+              <button class="masmenos" type="submit" name="masmenos">+</button>
+              <button class="masmenos" type="submit" name="masmenos">-</button>
               <li>3</li>
+              <button class="masmenos" type="submit" name="masmenos">+</button>
+              <button class="masmenos" type="submit" name="masmenos">-</button>
               <li>4</li>
+              <button class="masmenos" type="submit" name="masmenos">+</button>
+              <li>9</li>
             </ul>
           </article>
           <article class="precio">
             <ul>
               <li>200</li>
+              <br>
               <li>300</li>
+              <br>
               <li>400</li>
+              <br>
+              <li>900</li>
             </ul>
           </article>
         </div>

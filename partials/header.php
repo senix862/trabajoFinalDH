@@ -6,7 +6,8 @@
     "Contacto" => "contacto.php",
     "Registrarse" => "registro.php",
     "Ingresar" => "login.php",
-    "Mi Perfil" => "profile.php"
+    "Mi Perfil" => "profile.php",
+    "Salir" => "partials/logout.php"
   ];
  ?>
 
@@ -18,7 +19,7 @@
       <ul>
         <?php
         foreach ($secciones as $seccion => $url) :?>
-          <li><a href="<?php echo $url?>"><?php echo $seccion?></a></li>
+          <li><a href="<?=$url?>"><?=$seccion?></a></li>
         <?php endforeach; ?>
       </ul>
     </nav>

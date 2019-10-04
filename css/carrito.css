@@ -49,7 +49,7 @@ div.container{
 .main-productos h2{
   background-color:rgb(165, 96, 143);
   border-radius: 10px;
-  width: 70%;
+  width: 98%;
   margin: auto;
   font-family: 'Quicksand', sans-serif;
   color: white;
@@ -57,34 +57,38 @@ div.container{
   margin-top: 4vh;
 }
 
-.main-productos h4{
-  /* float: left; */
-  /* margin-right: 6.7%; */
-}
+
 .main-productos h4.num{
   margin-left: 10%;
 }
 .main-productos h4.num#cantidad{
   margin-left: 12%;
 }
-/* .main-productos p{
-  float: left;
-  margin: 0 7%;
-  text-align: center;
-} */
-
-
+.cantidad{
+  position: relative;
+  right: 40px;
+}
+li {
+  display: inline-block;
+  margin-top: 3px;
+}
 button {
   color: white;
   background-color:rgb(165, 96, 143);
   text-align: center;
   width: 28%;
   margin: 10px;
-  right: 0;
-  left: 0;
   padding: 8px;
   border-radius: 10px;
   font-family: 'Quicksand', sans-serif;
+}
+
+button.masmenos{
+  display: inline-block;
+  width: 30%;
+  margin: 1px;
+  padding: 0;
+  border-radius: 7px;
 }
 
 @media (min-width:768px) {
