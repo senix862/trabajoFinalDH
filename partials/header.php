@@ -40,9 +40,9 @@
 
 
 </header>
-<section class="banner">
+<div class="banner">
   <div class="ban">
     <img src="img/banner.png" alt="BANNER">
     <h1><?php echo $textoBanner ?></h1>
   </div>
-</section>
+</div>

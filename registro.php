@@ -67,6 +67,7 @@ $password2 = $_POST["password2"];
     }
 }
 if (empty($errores)) header("location:profile.php");
+$textoBanner="Registro";
 ?>
 
 <!DOCTYPE html>
@@ -86,12 +87,6 @@ if (empty($errores)) header("location:profile.php");
           <div class="cuerpo">
         <!-- Arranca el main-->
             <main>
-              <!-- Banner -->
-              <section class="banner">
-                <div class="ban">
-                  <img src="img/banner.png" alt="BANNER">
-                  <h1>REGISTRARSE</h1>
-                </div>
               <!-- Campos a llenar -->
 
               <form class="" action="registro.php" method="post" enctype="multipart/form-data">

@@ -16,6 +16,7 @@ if($_POST){
   //   header("location:welcome.php");
   // }
 }
+$textoBanner="Ingresar";
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -35,12 +36,6 @@ if($_POST){
     <div class="cuerpo">
     <!-- Arranca el main-->
     <main>
-      <!-- Banner -->
-      <section class="banner">
-        <div class="ban">
-          <img src="img/banner.png" alt="BANNER">
-          <h1>INGRESAR</h1>
-        </div>
       <!-- AQUI DENTRO VA EL CONTENIDO A AGREGAR -->
         <div class="datos">
           <form class="" action="login.php" method="post">
