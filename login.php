@@ -13,7 +13,7 @@ if($_POST){
   $errores = validarLogin($_POST);
 
   // if (!$errores){
-  //   header("location:profile.php");
+  //   header("location:welcome.php");
   // }
 }
 ?>

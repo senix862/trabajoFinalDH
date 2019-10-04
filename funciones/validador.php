@@ -29,7 +29,7 @@ function validarLogin($datos) {
               //creo una cookie que va a durar 30 dias
               setcookie('email', $email, time() + 60*60*24*30);
             }
-            header('location:profile.php');
+            header('location:welcome.php');
           }
         }
         //deberia de buscar al usuario en la base de datos
