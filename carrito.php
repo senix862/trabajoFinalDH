@@ -1,3 +1,6 @@
+<?php
+$textoBanner="Mi Carrito";
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -16,13 +19,6 @@
       <div class="cuerpo">
       <!-- Arranca el main-->
       <main>
-      <!-- Banner -->
-        <section class="banner">
-          <div class="ban">
-            <img src="img/banner.png" alt="BANNER">
-            <h1>CARRITO</h1>
-          </div>
-        </section>
       <section class="main-carrito">
         <div class="main-productos">
 

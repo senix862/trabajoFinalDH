@@ -23,7 +23,7 @@ function validarLogin($datos) {
           if ($usuario["email"] == $email && password_verify($password, $usuario["password"])) {
             //aqui encontré al usuario y lo logueo
             $_SESSION["email"] = $email;
-            $_SESSION["avatar"] = $usuario["avatar"];
+            $_SESSION["avatar"] = "dataBase/avatarIMG/" . $usuario["avatar"];
             //pregunto si envie el mantenerme logeado
             if(isset($_POST['mantenerme'])) {
               //creo una cookie que va a durar 30 dias

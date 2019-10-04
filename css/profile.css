@@ -17,9 +17,9 @@ body{
 
 .cuerpo{
   position: absolute;
-  top: 14vh;
-
-section.banner {
+  top: 175px;
+}
+main section.banner {
   display: inline-block;
   height: 3vh;
   position: relative;

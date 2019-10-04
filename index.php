@@ -1,3 +1,7 @@
+<?php
+  $textoBanner="Novedades";
+
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -17,12 +21,6 @@
       <!-- Arranca el main-->
       <main>
         <!-- Banner -->
-        <section class="banner">
-          <div class="ban">
-            <img src="img/banner.png" alt="BANNER">
-            <h1>Novedades</h1>
-          </div>
-        </section>
         <!-- Productos por categorías -->
         <section class="productos">
           <article class="aros">

@@ -1,6 +1,9 @@
+<?php
+
+ $textoBanner="Mi Perfil";
 
 
-
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -19,12 +22,6 @@
       <div class="cuerpo">
       <!-- Arranca el main-->
       <main>
-        <!-- Banner -->
-        <section class="banner">
-          <div class="ban">
-            <img src="img/banner.png" alt="BANNER">
-            <h1>Mi Perfil</h1>
-          </div>
         </section>
         <section class="main-profile">
             <div class="img-background">

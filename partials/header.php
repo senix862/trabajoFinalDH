@@ -1,4 +1,5 @@
 <?php
+
   $secciones = [
     "Home" => "index.php",
     "Preguntas Frecuentes" => "faq.php",
@@ -30,15 +31,18 @@
       BLACKBIRD
     </p></a>
   </div>
-
-  <div class="carrito">
-
-     <div class="lupa">
-      <a href="productos.php"><i class="fas fa-search"></i></a>
-    </div>
-    <div class="carrito">
-      <a href="carrito.php"><i class="fas fa-shopping-basket"></i></a>
-    </div>
+  <div class="lupa">
+   <a href="productos.php"><i class="fas fa-search"></i></a>
+ </div>
+ <div class="carrito">
+    <a href="carrito.php"><i class="fas fa-shopping-basket"></i></a>
   </div>
 
+
 </header>
+<section class="banner">
+  <div class="ban">
+    <img src="img/banner.png" alt="BANNER">
+    <h1><?php echo $textoBanner ?></h1>
+  </div>
+</section>

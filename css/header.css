@@ -9,7 +9,7 @@ header{
   width: 100%;
   position: fixed;
   z-index: 2;
-  height: 85px;
+  height: 68px;
 }
 
 header div{
@@ -23,19 +23,12 @@ header .carrito{
   align-items: center;
  }
 
-header .carrito .carrit{
-  font-size: 4vh;
-  margin:0 auto;
-  width: 60%;
-  position: relative;
-}
-
  .carrito a{
   font-size: 20px;
     color:black;
     text-decoration: none;
     position: absolute;
-    top: 38%;
+    top: 30px;
     right: 18%;
 }
  .lupa a{
@@ -43,8 +36,8 @@ header .carrito .carrit{
     color:black;
     text-decoration: none;
     position: absolute;
-    top: 38%;
-    right: 28%;
+    top: 30px;
+    left: 70px;
 }
 header .hamburguesa{
   display: flex;
@@ -53,18 +46,18 @@ header .hamburguesa{
 }
 
 header .hamburguesa i{
-  margin-left: 20%;
-  margin-top: 20%;
-  font-size: 25px;
+  margin-left: 260%;
+  margin-top: 26px;
+  font-size: 29px;
 }
 nav {
     transition: .5s;
 }
 header .hamburguesa nav {
   position: absolute;
-  top: 85px;
-  left: 0;
-  text-align: initial;
+  top: 70px;
+  right: -200%;
+  text-align: right;
   font-size: 20px;
   background-color: rgb(255, 199, 236);
   max-height: 0;
@@ -76,9 +69,12 @@ header .hamburguesa i:hover nav {
     transition: 0.5s;
 
 }
+header nav ul {
+  width:160px;
+}
 header nav ul li {
-  padding-left: 20%;
-  padding-right: 2%;
+  padding-left: 2%;
+  padding-right: 20%;
   padding-bottom: 1vh;
   transition: .3s;
 }
@@ -94,21 +90,40 @@ header nav ul li:hover {
 }
 .logo a{
   display: flex;
-  top: 5px;
-  left: 35%;
+  top: 15px;
+  left: 4%;
   position: absolute;
   flex-direction: column;
   align-items: center;
 }
 
 .logo a img{
-  width: 55px;
+  width: 45px;
 }
 
 .logo a p{
+  display: none;
   text-align: center;
   margin-top: 3px;
   color:black;
   font-size: 14px;
   font-weight: bold;
 }
+
+section.banner{
+  position: absolute;
+  top:68px
+}
+
+
+/*
+header .hamburguesa i{
+  margin-left: 25%;
+  margin-top: 9%;
+  font-size: 40px;
+} */
+/* header .hamburguesa i{
+  margin-left: 25%;
+  margin-top: 22%;
+  font-size: 40px;
+} */
