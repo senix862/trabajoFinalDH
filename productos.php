@@ -18,13 +18,6 @@
       <div class="cuerpo">
       <!-- Arranca el main-->
       <main>
-        <!-- Banner -->
-        <section class="banner">
-          <div class="ban">
-            <img src="img/banner.png" alt="BANNER">
-            <h1>PRODUCTOS</h1>
-          </div>
-        </section>
         <!-- Dijes -->
       <section class="dijes">
         <h2 id="verDijes"> ~ Dijes ~ </h2>

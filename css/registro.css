@@ -22,7 +22,8 @@ header div{
 
 .cuerpo{
   position: absolute;
-  top: 210px;
+  top: 140px;
+  width:100%;
 }
 
 div.container{

@@ -17,14 +17,9 @@ body{
 
 .cuerpo{
   position: absolute;
-  top: 180px;
+  top: 150px;
+  text-align:center;
 }
-
-header .carrito .carrit a{
-    color:black;
-    text-decoration: none;
-}
-
 div.container{
   text-align: center;
   width: 100%;
@@ -32,6 +27,10 @@ div.container{
 
 
 /*---------Propiedades del ITEM---------*/
+.img-container img{
+  width: 70%;
+}
+
 .item-info{
   padding: 10px;
 }

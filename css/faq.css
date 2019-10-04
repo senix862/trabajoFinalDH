@@ -18,7 +18,8 @@ body{
 
 .cuerpo{
   position: absolute;
-  top: 200px;
+  top: 140px;
+  /* width:100%; */
 }
 
 div.container{
