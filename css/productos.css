@@ -19,9 +19,12 @@ body{
 
 .cuerpo{
   position: absolute;
-  top: 175px;
+  top: 140px;
+  width:100%;
 }
-
+main{
+text-align: center;
+}
 
 h1{
   text-align: center;

@@ -1,5 +1,5 @@
 <?php
-
+  require_once('funciones/autoload.php');
   $secciones = [
     "Home" => "index.php",
     "Preguntas Frecuentes" => "faq.php",
