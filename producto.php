@@ -1,3 +1,5 @@
+<?php $textoBanner="Anillo Rodocrosita" ?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -16,13 +18,6 @@
       <div class="cuerpo">
       <!-- Arranca el main-->
     <main>
-      <!-- Banner -->
-      <section class="banner">
-        <div class="ban">
-          <img src="img/banner.png" alt="BANNER">
-          <h1>Anillo Rodocrosita</h1>
-        </div>
-      </section>
       <!-- DETALLES DEL PRODUCTO -->
       <section class="item-container">
         <div class="item">
