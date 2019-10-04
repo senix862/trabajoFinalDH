@@ -5,8 +5,8 @@ function validarRegistro($datos, $password2, $terminos) {
 
     $email = trim($datos['email']);
     $password = $datos['password'];
-    $nombre = $datos['nombre'];
-    $apellido = $datos['apellido'];
+    $nombre = trim($datos['nombre']);
+    $apellido = trim($datos['apellido']);
     $paises = $datos['paises'];
 
 
@@ -15,6 +15,16 @@ function validarRegistro($datos, $password2, $terminos) {
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errores['email'] = 'El e-mail no es válido';
     }
+    //Ahora validamos @email
+    $usuario = file_get_contents('dataBase/usuarios.json');
+    //lo transformo a variables en php
+    $usuarios = json_decode($usuario, true);
+    foreach($usuarios as $usuario){
+      if($email == $usuario['email']){
+        $errores['email'] = 'El email ya esta registrado';
+      }
+    }
+
     if (strlen($password) === 0) {
           $errores['password'] = 'Ingrese su contraseña';
         }

@@ -1,6 +1,5 @@
 <?php
 
-var_dump($_POST);
 //FALTA GUARDAR LOS CAMPOS AL INGRESAR UN CAMPO INCORRECTO; Y FALTA VALIDAR EL CHECK;
   $nombre = "";
   $apellido = "";
@@ -37,7 +36,7 @@ if($_POST){
 $password2 = $_POST["password2"];
 
  $errores = validarRegistro($usuario, $password2, $terminos);
-  if (empty($error)) {
+  if (empty($error) && empty($errores)) {
     // Acá se sube la imagen
     if ($_FILES["avatar"]["error"]===0) {
       $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
@@ -47,18 +46,17 @@ $password2 = $_POST["password2"];
         $usuario["avatar"] = subirAvatar($_FILES['avatar'], $_POST["email"]);
       }
     }
-  //deberia hacerse solo si no hay errores
-
-
     // Acá guardamos la contraseña
       if ($_POST["password"] === $_POST["password2"]) {
         $usuario["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
+      //Aca creamos el usuario
+        $usuarios = file_get_contents("dataBase/usuarios.json");
+        $usuariosArray= json_decode($usuarios,true);
+        $usuariosArray[]=$usuario;
+        $usuariosJson= json_encode($usuariosArray);
+        file_put_contents('dataBase/usuarios.json', $usuariosJson);
       }
-      $usuarios = file_get_contents("dataBase/usuarios.json");
-      $usuariosArray= json_decode($usuarios,true);
-      $usuariosArray[]=$usuario;
-      $usuariosJson= json_encode($usuariosArray);
-      file_put_contents('dataBase/usuarios.json', $usuariosJson);
+  //deberia hacerse solo si no hay errores
 
       $datos = [
           'team' => 'grupo5',
