@@ -2,6 +2,10 @@
 
  $textoBanner="Mi Perfil";
 
+ $usuario = file_get_contents('dataBase/usuarios.json');
+ //lo transformo a variables en php
+ $usuarios = json_decode($usuario, true);
+ 
 
 ?>
 <!DOCTYPE html>
