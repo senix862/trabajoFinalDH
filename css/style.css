@@ -8,14 +8,6 @@
   box-sizing: border-box;
 }
 
-body{
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-
 .cuerpo{
   position: absolute;
   top: 120px;
@@ -68,7 +60,7 @@ a.ver-categoria {
 /*media queries*/
 @media (min-width:768px) {
   .container{
-    max-width: 720px;
+    max-width: 768px;
   }
 
   div.photo-container {
@@ -98,4 +90,9 @@ a.ver-categoria {
       float: left;
       width: 28%;
       margin-left: 3%;
+    }
+  @media (min-width:1440px) {
+    .container{
+      width: 100%;
+    }
     }

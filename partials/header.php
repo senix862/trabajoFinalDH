@@ -4,11 +4,14 @@
     "Home" => "index.php",
     "Preguntas Frecuentes" => "faq.php",
     "Contacto" => "contacto.php",
-    "Registrarse" => "registro.php",
-    "Ingresar" => "login.php",
-    "Mi Perfil" => "profile.php",
-    "Salir" => "partials/logout.php"
   ];
+  if (estaElUsuarioLogeado() == false) {
+    $secciones["Registrarse"] = "registro.php";
+    $secciones["Ingresar"] = "login.php";
+  } elseif (estaElUsuarioLogeado() == true ) {
+    $secciones["Mi Perfil"] = "profile.php";
+    $secciones["Salir"] = "partials/logout.php";
+  }
  ?>
 
   <link rel="stylesheet" href="css/header.css">
@@ -31,6 +34,10 @@
     <p>
       BLACKBIRD
     </p></a>
+  </div>
+  <!-- barra de busqueda -->
+  <div class="active-purple-3 active-purple-4 mb-4">
+  <input id="search"class="form-control" type="text" placeholder="Search" aria-label="Search">
   </div>
   <div class="lupa">
    <a href="productos.php"><i class="fas fa-search"></i></a>

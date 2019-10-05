@@ -1,15 +1,12 @@
 header{
   background-color: rgb(255, 199, 236);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   display: flex;
   justify-content: space-between;
   width: 100%;
   position: fixed;
   z-index: 2;
   height: 68px;
+  left: 0;
 }
 
 header div{
@@ -24,20 +21,20 @@ header .carrito{
  }
 
  .carrito a{
-  font-size: 20px;
+  font-size: 22px;
     color:black;
     text-decoration: none;
     position: absolute;
-    top: 30px;
+    top: 25px;
     right: 18%;
 }
  .lupa a{
-  font-size: 20px;
+  font-size: 22px;
     color:black;
     text-decoration: none;
     position: absolute;
-    top: 30px;
-    left: 70px;
+    top: 23px;
+    left: 62%;
 }
 header .hamburguesa{
   display: flex;
@@ -47,7 +44,7 @@ header .hamburguesa{
 
 header .hamburguesa i{
   margin-left: 260%;
-  margin-top: 26px;
+  margin-top: 27px;
   font-size: 29px;
 }
 nav {
@@ -66,8 +63,8 @@ header .hamburguesa nav {
 header .hamburguesa i:hover nav {
   max-height: 1000px;
   overflow: visible;
-    transition: 0.5s;
-
+  transition: 0.5s;
+  /* height: 150px; */
 }
 header nav ul {
   width:160px;
@@ -109,7 +106,14 @@ header nav ul li:hover {
   font-size: 14px;
   font-weight: bold;
 }
-
+input#search{
+  position: absolute;
+  width: 40%;
+  top: 20px;
+  left: 20%;
+  border: 1px solid #000;
+  box-shadow: 0 0 0 1px #f48fb1;
+}
 
 div.banner{
   position: absolute;

@@ -8,20 +8,15 @@
   box-sizing: border-box;
 }
 
-body{
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .cuerpo{
+  width: 100%;
   position: absolute;
   top: 140px;
   left:7%;
 }
 
 div.container{
+  width: 100%;
   text-align: center;
 }
 
