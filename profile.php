@@ -1,4 +1,8 @@
 <?php
+require_once('funciones/autoload.php');
+if (estaElUsuarioLogeado() == false) {
+  header('location:login.php');
+}
 
  $textoBanner="Mi Perfil";
 

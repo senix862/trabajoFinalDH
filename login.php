@@ -1,5 +1,8 @@
 <?php
 require_once('funciones/autoload.php');
+if (estaElUsuarioLogeado() == true) {
+  header('location:profile.php');
+}
 
 $email="";
 $password="";

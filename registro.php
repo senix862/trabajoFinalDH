@@ -9,6 +9,10 @@
   require_once('funciones/usuarios.php');
   require_once('funciones/curl.php');
   require_once('funciones/validarRegistro.php');
+  require_once('funciones/autoload.php');
+  if (estaElUsuarioLogeado() == true) {
+    header('location:profile.php');
+  }
 
 $errorArchivo = "";
 $error = "";
