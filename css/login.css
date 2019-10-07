@@ -10,8 +10,9 @@
 
 .cuerpo{
   position: absolute;
+  left: 5%;
   top: 140px;
-  width:100%;
+  width:90%;
 }
 
 div.container{
@@ -35,6 +36,7 @@ input {
     line-height: 20px;
     padding: 3px;
 }
+
 button {
   color: white;
   background-color:rgb(165, 96, 143);

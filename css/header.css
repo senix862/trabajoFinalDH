@@ -2,7 +2,7 @@ header{
   background-color: rgb(255, 199, 236);
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  min-width: 100%;
   position: fixed;
   z-index: 2;
   height: 68px;
@@ -137,6 +137,152 @@ h1{
   font-size: 25px;
 }
 
+
+@media (min-width:768px) {
+  header{
+    background-color: rgb(255, 199, 236);
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    position: fixed;
+    z-index: 2;
+    height: 80px;
+    left: 0;
+  }
+
+  .carrito a{
+   font-size: 22px;
+     color:black;
+     text-decoration: none;
+     position: absolute;
+     top: 25px;
+     right: 10%;
+ }
+  .lupa a{
+   font-size: 22px;
+     color:black;
+     text-decoration: none;
+     position: absolute;
+     top: 23px;
+     left: 75%;
+ }
+ header .hamburguesa{
+   display: flex;
+   align-items: center;
+   position: absolute;
+ }
+
+ header .hamburguesa i{
+   margin-left: 280%;
+   margin-top: 27px;
+   font-size: 29px;
+ }
+ nav {
+     transition: .5s;
+ }
+ header .hamburguesa nav {
+   position: absolute;
+   top: 67.8px;
+   right: -200%;
+   text-align: right;
+   font-size: 20px;
+   background-color: rgb(255, 199, 236);
+   max-height: 0;
+   overflow: hidden;
+ }
+ header .hamburguesa i:hover nav {
+   max-height: 1000px;
+   overflow: visible;
+   transition: 0.5s;
+   /* height: 150px; */
+ }
+ header nav ul {
+   width:160px;
+ }
+ header nav ul li {
+   padding-left: 2%;
+   padding-right: 20%;
+   padding-bottom: 1vh;
+   transition: .3s;
+ }
+
+ header nav ul li a{
+   font-family: 'Quicksand', sans-serif;
+   text-decoration: none;
+   color: black;
+   /* font-weight: bold; */
+ }
+ header nav ul li:hover {
+   background: rgb(165, 96, 143);
+ }
+ .logo a{
+   display: flex;
+   position: absolute;
+ }
+
+ .logo a img{
+   width: 45px;
+ }
+
+ .logo a p{
+   display: inline;
+   margin-top: -2.5px;
+   margin-left: 3px;
+   color:black;
+   font-size: 14px;
+   font-weight: bold;
+
+ }
+ input#search{
+   position: absolute;
+   width: 55%;
+   top: 20px;
+   left: 19%;
+   border: 1px solid #000;
+   box-shadow: 0 0 0 1px #f48fb1;
+ }
+ div.banner{
+   top:80px;
+ }
+}
+@media (min-width:1440px) {
+  header .hamburguesa nav {
+    right: -205%;
+  }
+  header nav ul {
+    width:300px;
+    font-size: 40px;
+  }
+  .carrito a{
+   font-size: 35px;
+   top: 12px;
+   right: 12%;
+ }
+ .lupa a{
+  font-size: 35px;
+  top: 11px;
+  left: 75%;
+}
+.logo a{
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+}
+.logo a img{
+  width: 60px;
+}
+
+.logo a p{
+  margin-top: 9.5px;
+  font-size: 22px;
+}
+}
+@media (min-width:1440px) {
+  header nav ul {
+    width:200px;
+    font-size: 30px;
+  }
+  }
 /*
 header .hamburguesa i{
   margin-left: 25%;

@@ -60,7 +60,13 @@ a.ver-categoria {
 /*media queries*/
 @media (min-width:768px) {
   .container{
-    max-width: 768px;
+    max-width: 100%;
+  }
+  .cuerpo{
+    position: absolute;
+    top: 150px;
+    width:95%;
+    left: 2.5%;
   }
 
   div.photo-container {

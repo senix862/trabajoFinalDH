@@ -1,4 +1,6 @@
-<?php $textoBanner="Preguntas Frecuentes" ?>
+<?php
+$textoBanner="Preguntas Frecuentes"
+?>
 
 <!DOCTYPE html>
 <html lang="es" dir="ltr">

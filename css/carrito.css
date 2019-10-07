@@ -7,17 +7,12 @@
   outline: none;
   box-sizing: border-box;
 }
-
-body{
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .cuerpo{
   position: absolute;
-  top: 190px;
+  top: 130px;
+  left: 0;
+  width: 95%;
+  margin-left: 2.5%;
 }
 
 div.container{
@@ -27,11 +22,14 @@ div.container{
 
 /* ---- Carrito de Compras -----*/
 .caracteristicas{
-  width: 81%;
+  width: 82%;
   display: flex;
   justify-content: space-between;
   margin-left: 9.5%;
-
+}
+.caracteristicas h4{
+  font-size: 16px;
+  width: 33.33%;
 }
 .productos{
   display: flex;
@@ -62,7 +60,7 @@ div.container{
   margin-left: 10%;
 }
 .main-productos h4.num#cantidad{
-  margin-left: 12%;
+  margin-left: 25%;
 }
 .cantidad{
   position: relative;
@@ -95,15 +93,11 @@ button.masmenos{
   .container{
     max-width: 720px;
   }
-  header{
-    height: 28vh;
-  }
+
   .cuerpo{
-    top:28vh;
+    top:150px;
   }
-  header .hamburguesa nav {
-    top: 27.6vh;
-  }
+
   .main-productos h4.num#cantidad{
     margin-left: 27%;
   }

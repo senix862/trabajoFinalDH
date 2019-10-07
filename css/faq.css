@@ -10,8 +10,9 @@
 
 .cuerpo{
   position: absolute;
+  left:5%;
   top: 140px;
-  width:100%;
+  width:90%;
 }
 
 div.container{
@@ -21,9 +22,9 @@ div.container{
 
 /* AQUI VA LA PARTE DE PREGUNTAS */
 .main-content{
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 100%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
 }
 .preguntas{
   line-height: 1.5em;
@@ -43,12 +44,16 @@ div.container{
 }
 
 /*media queries*/
-@media (min-width:768px) {
+  @media (min-width:768px) {
   .container{
-    max-width: 720px;
+    max-width: 768px;
   }
 
-  @media (min-width:1200px) {
+  @media (min-width:1024px) {
     .container{
-      width:100%;
+      width:1024px;
     }
+  @media (min-width:1440px) {
+      .container{
+        width:1440px;
+      }
