@@ -1,7 +1,5 @@
 header{
   background-color: rgb(255, 199, 236);
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   position: fixed;
   z-index: 2;
@@ -115,6 +113,7 @@ div.banner{
   position: absolute;
   top:50px;
   left:0;
+  right: 0;
   width: 100%;
 }
 .banner img{
@@ -128,6 +127,7 @@ h1{
   position: absolute;
   top: 7px;
   left: 7.5%;
+  right: 7.5%;
   border: solid black 2px;
   padding: 8px;
   font-size: 18px;

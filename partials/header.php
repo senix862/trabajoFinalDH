@@ -54,10 +54,8 @@
 
 </header>
 <div class="banner">
-  <div class="ban">
     <img src="img/banner.png" alt="BANNER">
     <h1><?php echo $textoBanner ?></h1>
-  </div>
 </div>
 
 <div class="menuHor">

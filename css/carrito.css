@@ -8,77 +8,55 @@
   box-sizing: border-box;
 }
 
-body{
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .cuerpo{
-  position: absolute;
-  top: 190px;
-}
-
-div.container{
-  text-align: center;
+  float: left;
+  margin-top: 120px;
   width: 100%;
+  text-align: center;
 }
 
 /* ---- Carrito de Compras -----*/
-.caracteristicas{
-  width: 81%;
-  display: flex;
-  justify-content: space-between;
-  margin-left: 9.5%;
 
-}
-.productos{
-  display: flex;
-  justify-content: space-between;
-  text-align: initial;
-  width:81%;
-  margin-left: 9.5%;
-}
 
-.main-productos{
-  overflow: hidden;
-  margin-bottom: 4vh;
-}
-
-.main-productos h2{
+p#prod{
   background-color:rgb(165, 96, 143);
   border-radius: 10px;
-  width: 98%;
+  padding: 3px;
+  width: 90%;
+  font-size: 18px;
   margin: auto;
   font-family: 'Quicksand', sans-serif;
   color: white;
-  margin-bottom: 4vh;
-  margin-top: 4vh;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+table, th, td {
+  border: 0.5px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+th, td {
+  padding: 5px;
 }
 
-
-.main-productos h4.num{
-  margin-left: 10%;
-}
-.main-productos h4.num#cantidad{
-  margin-left: 12%;
-}
-.cantidad{
-  position: relative;
-  right: 40px;
+table {
+width: 90%;
+margin-left: 5%;
+margin-bottom: 15px;
 }
 li {
   display: inline-block;
   margin-top: 3px;
 }
-button {
+button.comprar {
+  display: inline-block;
   color: white;
   background-color:rgb(165, 96, 143);
   text-align: center;
-  width: 28%;
+  width: 40%;
+  max-width: 120px;
   margin: 10px;
-  padding: 8px;
+  padding: 5px;
   border-radius: 10px;
   font-family: 'Quicksand', sans-serif;
 }
@@ -86,41 +64,28 @@ button {
 button.masmenos{
   display: inline-block;
   width: 30%;
+  color: white;
+  max-width: 20px;
   margin: 1px;
+  margin-left: 5px;
+  line-height: 20px;
   padding: 0;
   border-radius: 7px;
+  background-color:rgb(165, 96, 143);
 }
 
 @media (min-width:768px) {
-  .container{
-    max-width: 720px;
-  }
-  header{
-    height: 28vh;
-  }
+
   .cuerpo{
-    top:28vh;
+    margin-top: 0;
   }
-  header .hamburguesa nav {
-    top: 27.6vh;
-  }
+
   .main-productos h4.num#cantidad{
     margin-left: 27%;
   }
 }
 @media (min-width:1024px) {
-  .container{
-    max-width: 1024px;
-  }
-  header{
-    height: 36vh;
-  }
-  .cuerpo{
-    top:36vh;
-  }
-  header .hamburguesa nav {
-    top: 35.6vh;
-  }
+
   .main-productos h4.num#cantidad{
     margin-left: 27%;
   }

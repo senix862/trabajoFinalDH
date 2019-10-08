@@ -1,15 +1,21 @@
 <?php
 
+require_once('partials/paises.php');
+require_once('funciones/usuarios.php');
+require_once('funciones/curl.php');
+require_once('funciones/validarRegistro.php');
+require_once('funciones/autoload.php');
+
+if (isset($_COOKIE['recuerdame'])) {
+      logear($_COOKIE['recuerdame']);
+  }
+
 //FALTA GUARDAR LOS CAMPOS AL INGRESAR UN CAMPO INCORRECTO; Y FALTA VALIDAR EL CHECK;
   $nombre = "";
   $apellido = "";
   $email = "";
 
-  require_once('partials/paises.php');
-  require_once('funciones/usuarios.php');
-  require_once('funciones/curl.php');
-  require_once('funciones/validarRegistro.php');
-  require_once('funciones/autoload.php');
+
   if (estaElUsuarioLogeado() == true) {
     header('location:profile.php');
   }
@@ -70,8 +76,15 @@ $password2 = $_POST["password2"];
       // $usuario = peticionCurl('http://apiusers.juancarlosdh.dhalumnos.com/api/users', 'POST', $datos);
     }
 }
+guardarUsuario($usuario);
+
+logear($email);
+
 if (empty($errores)) header("location:profile.php");
+
+
 $textoBanner="Registro";
+
 ?>
 
 <!DOCTYPE html>

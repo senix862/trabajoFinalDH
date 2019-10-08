@@ -9,8 +9,8 @@
 }
 
 .cuerpo{
-  position: absolute;
-  top: 140px;
+  float: left;
+  margin-top: 140px;
   width: 100%;
 }
 
@@ -49,12 +49,13 @@ h2{
   text-align: center;
   font-family: 'Quicksand', sans-serif;
 }
-h4{
+
+h5{
   text-align:center;
-  width: 320px;
+  width: 60%;
   margin: auto;
-  border: 1px solid gray;
-  border-radius: 8px;
+  /* border: 1px solid gray;
+  border-radius: 8px; */
   font-family: 'Quicksand', sans-serif;
 }
 button.editar {
@@ -67,4 +68,11 @@ button.editar {
   padding: 10px;
   border-radius: 10px;
   font-family: 'Quicksand', sans-serif;
+}
+
+@media (min-width:768px) {
+  .cuerpo {
+   width: 100%;
+   margin-top: 0;
+ }
 }

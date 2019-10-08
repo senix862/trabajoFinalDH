@@ -20,55 +20,40 @@ $textoBanner="Mi Carrito";
       <div class="cuerpo">
       <!-- Arranca el main-->
       <main>
-      <section class="main-carrito">
-        <div class="main-productos">
-
-          <h2>Productos</h2>
-          <div class="caracteristicas">
-            <h4>Descripcion</h4>
-            <h4 class="num" id="cantidad">Cantidad</h4>
-            <h4 class="num">Precio Unitario</h4>
-          </div>
-          </article>
-          <div class="productos">
-            <article class="nombre">
-              <ul>
-                <li>Anillo Amatista</li>
-                <li>Dije piedra Luna</li>
-                <li>Aros Cuarzo</li>
-                <br>
-                <li>TOTAL</li>
-              </ul>
-            </article>
-          <article class="cantidad">
-            <ul>
-              <button class="masmenos" type="submit" name="masmenos">-</button>
-              <li>2</li>
-              <button class="masmenos" type="submit" name="masmenos">+</button>
-              <button class="masmenos" type="submit" name="masmenos">-</button>
-              <li>3</li>
-              <button class="masmenos" type="submit" name="masmenos">+</button>
-              <button class="masmenos" type="submit" name="masmenos">-</button>
-              <li>4</li>
-              <button class="masmenos" type="submit" name="masmenos">+</button>
-              <li>9</li>
-            </ul>
-          </article>
-          <article class="precio">
-            <ul>
-              <li>200</li>
-              <br>
-              <li>300</li>
-              <br>
-              <li>400</li>
-              <br>
-              <li>900</li>
-            </ul>
-          </article>
+          <p id="prod">Mis Productos</p>
+          <div class="tabla">
+      <table>
+          <tr>
+            <th>Descripción</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+          </tr>
+          <tr>
+            <td>Anillo Amatista</td>
+            <td><button class="masmenos" type="submit" name="masmenos">-</button>
+            <li>3</li><button class="masmenos" type="submit" name="masmenos">+</button></td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td>Dije piedra Luna</td>
+            <td><button class="masmenos" type="submit" name="masmenos">-</button>
+            <li>2</li><button class="masmenos" type="submit" name="masmenos">+</button></td>
+            <td>940</td>
+          </tr>
+          <tr>
+            <td>Aros Cuarzo</td>
+            <td><button class="masmenos" type="submit" name="masmenos">-</button>
+            <li>2</li><button class="masmenos" type="submit" name="masmenos">+</button></td>
+            <td>420</td>
+          </tr>
+          <tr>
+            <td>TOTAL</td>
+            <td>7</td>
+            <td>1860</td>
+          </tr>
+        </table>
         </div>
-        </div>
-        <button type="submit" name="button">COMPRAR</button>
-      </section>
+        <button class="comprar" type="submit" name="button">Comprar</button>
       </main>
       <!-- Inicio Footer -->
         <?php require('partials/footer.php') ?>

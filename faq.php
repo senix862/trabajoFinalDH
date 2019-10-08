@@ -1,7 +1,9 @@
 <?php
-  $textoBanner="Preguntas Frecuentes";
+
+$textoBanner="Preguntas Frecuentes";
 
 ?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -18,7 +20,7 @@
   <body>
     <div class="container">
       <!-- Header -->
-      <?php require_once('partials/header.php') ?>
+      <?php require_once('partials/header.php'); ?>
       <!-- CONTENIDO -->
       <div class="cuerpo">
       <!-- Arranca el main-->
@@ -74,7 +76,7 @@
           <article class="pregunta">
             <h3>¿Dónde están ubicados?</h3>
             <p>Estamos en Lima 1111. 2do Piso.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3309494247746!2d-58.38378388530638!3d-34.62107608045496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28ea8781cb%3A0xb791570f7236c962!2sDigital%20House!5e0!3m2!1ses-419!2sar!4v1568083946385!5m2!1ses-419!2sar" width="400" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3309494247746!2d-58.38378388530638!3d-34.62107608045496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28ea8781cb%3A0xb791570f7236c962!2sDigital%20House!5e0!3m2!1ses-419!2sar!4v1568083946385!5m2!1ses-419!2sar" width="90%" height="30%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
           </article>
         </section>
 

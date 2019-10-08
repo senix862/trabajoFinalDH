@@ -1,20 +1,51 @@
 <?php
-require_once('funciones/autoload.php');
-if (estaElUsuarioLogeado() == true) {
-  header('location:profile.php');
-}
+  require_once('funciones/autoload.php');
 
-$email="";
-$password="";
+  // if (isset($_COOKIE['recuerdame'])) {
+  //     logear($_COOKIE['recuerdame']);
+  // }
 
-$errores=[
-  "email" => "",
-  "password" => ""
-];
-if($_POST){
-  $email = trim($_POST["email"]);
-  $errores = validarLogin($_POST);
+  if (estaElUsuarioLogeado() == true) {
+    header('location:profile.php');
+  }
 
+  $email="";
+  $password="";
+
+  $errores=[
+    "email" => "",
+    "password" => ""
+  ];
+
+  if($_POST){
+    $email = trim($_POST["email"]);
+    $password = $_POST['password'];
+    $errores = validarLogin($_POST);
+
+    if (!$errores) {
+
+        $archivo = file_get_contents('dataBase/usuarios.json');
+        $usuarios = json_decode($archivo, true);
+
+        foreach ($usuarios as $usuario) {
+            if ($usuario['email'] == $email && password_verify($password, $usuario['password'])) {
+                //Si encontré al usuario, lo logeo
+                $_SESSION['email'] = $email;
+                $_SESSION['avatar'] = $usuario['avatar'];
+                $_SESSION['nombre'] = $nombre;
+
+                //si chequeamos el recuerdame
+                if (isset($_POST['recuerdame'])) {
+                    //guardamos la cookie del email
+                    setcookie('recuerdame', $email, time() + 60*60*24);
+                }
+                //Redirijo a miPerfil
+                header('location:profile.php');
+            }
+        }
+        $errores['email'] = 'Usuario o clave incorrectos';
+
+    }
 }
 $textoBanner="Ingresar";
 ?>
@@ -54,8 +85,8 @@ $textoBanner="Ingresar";
               <?= (isset($errores["password"]) ? $errores["password"] : "")?>
             </div>
             <div class="cookie">
-              <input type="checkbox" id="cookie" name="" value="">
-            <label for="cookie">Mantenerme Conectado</label>
+              <input type="checkbox" id="recuerdame" name="recuerdame" class="form-check">
+            <label for="recuerdame">Mantenerme Conectado</label>
             </div>
             <a href="#">olvidé mi contraseña</a>
             <br>

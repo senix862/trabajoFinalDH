@@ -9,16 +9,11 @@
 }
 
 .cuerpo{
+  float: left;
   width: 100%;
-  position: absolute;
-  top: 150px;
+  margin-top: 130px;
   text-align:center;
 }
-div.container{
-  text-align: center;
-  width: 100%;
-}
-
 
 /*---------Propiedades del ITEM---------*/
 .img-container img{
@@ -29,11 +24,11 @@ div.container{
   padding: 10px;
 }
 
-button {
+button#comprar {
   color: white;
   background-color:rgb(165, 96, 143);
   text-align: center;
-  width: 28%;
+  width: 30%;
   max-width: 200px;
   margin: 5px;
   right: 0;
@@ -91,33 +86,29 @@ button {
 
 /*media queries*/
 @media (min-width:768px) {
+  .cuerpo{
+    margin-top: 0;
+  }
+
+  .img-container {
+    float: left;
+    width: 55%;
+  }
   .item-info{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    float: right;
+    width: 45%;
+    margin-top: 25px;
   }
+
+  .item-description{
+    margin-top: 10px;
+    float: left;
+  }
+
   .item-optionals{
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30%;
+    width: 40%;
   }
-  @media (min-width:1024px) {
-    header{
-      height: 27vh;
-    }
-    .cuerpo{
-      top:27vh;
-    }
-    header .hamburguesa nav {
-      top: 26.7vh;
-    }
-    .item-info{
-      width: 70%;
-      margin-left: 15%;
-      margin-right: 15%;
-    }
-    .item-optionals{
-      width: 50%;
-      margin-left: 25%;
-      margin-right: 25%;
-    }

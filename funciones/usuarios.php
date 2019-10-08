@@ -1,5 +1,5 @@
 <?php
-function buscarUsuarioEmail($email) {
+function buscarUsuarioEmail(string $email) {
     $usuario = [];
     $datos = [ 'team' => 'grupo1', 'commission' => 'tarde', 'search' => $email];
     $usuario = peticionCurl('http://apiusers.juancarlosdh.dhalumnos.com/api/users', 'GET', $datos);
@@ -18,4 +18,21 @@ function subirAvatar($archivo, $nombre) {
     //la muevo a mi carpeta avatars
     move_uploaded_file($archivo['tmp_name'], 'dataBase/avatarIMG/' . $nombreArchivo);
     return $nombreArchivo;
+}
+function guardarUsuario(array $usuario) {
+
+    if (!file_exists('dataBase')) {
+        mkdir('dataBase');
+    }
+    //me traigo el archivo entero
+    $archivo = file_get_contents('dataBase/usuarios.json');
+
+    $usuarios = json_decode($archivo, true);
+
+    $usuarios[] = $usuario;
+
+    $usuariosJson = json_encode($usuarios);
+
+    file_put_contents('dataBase/usuarios.json', $usuariosJson);
+
 }

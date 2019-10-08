@@ -1,4 +1,7 @@
-<?php $textoBanner="Contacto";
+<?php
+
+$textoBanner="Contacto";
+
  ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,10 @@
 <?php
 require_once('funciones/autoload.php');
+
+if (isset($_COOKIE['recuerdame'])) {
+    logear($_COOKIE['recuerdame']);
+}
+
 if (estaElUsuarioLogeado() == false) {
   header('location:login.php');
 }
@@ -34,12 +39,12 @@ if (estaElUsuarioLogeado() == false) {
         </section>
         <section class="main-profile">
             <div class="img-background">
-              <img src="https://rotary6690.org/wp-content/plugins/dacdbplus/img/no_image.jpg">
+              <!-- <img src="https://rotary6690.org/wp-content/plugins/dacdbplus/img/no_image.jpg"> -->
               <!-- <i id="pencil" class="fas fa-pencil-alt"></i> -->
+              <img src="https://rotary6690.org/wp-content/plugins/dacdbplus/img/no_image.jpg">
             </div>
-            <h2>acá va el nombre del usuario</h2>
             <br>
-            <h4> Email: amantedelacomida53@aol.com</h4>
+            <h5>Email: <?=$_SESSION['email']?></h5>
             <br>
             <button class="editar" type="submit" name="button">Editar Perfil</button>
         </section
