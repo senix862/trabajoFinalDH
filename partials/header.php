@@ -31,10 +31,15 @@
 
   <div class="logo">
     <a href="index.php"><img src="img/logo.png" alt="logo">
-    <p>
-      BLACKBIRD
-    </p></a>
+ </a>
+   <a href="index.php">
+     <p id="marca">
+       BLACKBIRD
+     </p>
+   </a>
   </div>
+
+
   <!-- barra de busqueda -->
   <div class="active-purple-3 active-purple-4 mb-4">
   <input id="search"class="form-control" type="text" placeholder="Search" aria-label="Search">
@@ -53,4 +58,15 @@
     <img src="img/banner.png" alt="BANNER">
     <h1><?php echo $textoBanner ?></h1>
   </div>
+</div>
+
+<div class="menuHor">
+    <ul>
+      <?php
+      foreach ($secciones as $seccion => $url) :?>
+        <li>
+          <a href="<?=$url?>"><?=$seccion?></a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
 </div>

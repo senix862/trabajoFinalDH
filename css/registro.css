@@ -8,12 +8,9 @@
   box-sizing: border-box;
 }
 .cuerpo{
-  position: absolute;
-  top: 140px;
+  float: left;
+  margin-top: 120px;
   width:100%;
-}
-
-div.container{
   text-align: center;
 }
 
@@ -22,7 +19,7 @@ div.container{
 label {
   float: left;
   width: 100%;
-  margin-top: 12px;
+  margin-top: 8px;
   padding: 4px;
   font-family: 'Quicksand', sans-serif;
 }
@@ -30,17 +27,17 @@ label {
 input {
     border-radius: 10px;
     border: 1px solid rgb(165, 96, 143);
-    line-height: 20px;
+    line-height: 18px;
     padding: 3px;
 }
 input.check{
-  margin-top: 10px;
+  margin-top: 8px;
   font-family: 'Quicksand', sans-serif;
 }
 select {
   border-radius: 10px;
   border: 1px solid rgb(165, 96, 143);
-  line-height: 20px;
+  line-height: 18px;
   padding: 4px;
 }
 
@@ -49,7 +46,7 @@ button {
   background-color:rgb(165, 96, 143);
   text-align: center;
   width: 28%;
-  margin: 10px;
+  margin: 8px;
   right: 0;
   left: 0;
   padding: 8px;
@@ -61,6 +58,12 @@ button {
 textarea {
   border-radius: 10px;
   border: 1px solid rgb(165, 96, 143);
-  line-height: 20px;
+  line-height: 18px;
   padding: 3px;
 }
+
+@media (min-width:768px) {
+   .cuerpo {
+    width: 100%;
+    margin-top: 0;
+  }

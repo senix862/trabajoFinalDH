@@ -55,7 +55,7 @@ $textoBanner="Ingresar";
             </div>
             <div class="cookie">
               <input type="checkbox" id="cookie" name="" value="">
-              <label for="cookie">Mantenerme Conectado</label>
+            <label for="cookie">Mantenerme Conectado</label>
             </div>
             <a href="#">olvidé mi contraseña</a>
             <br>

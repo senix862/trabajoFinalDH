@@ -10,7 +10,7 @@
 
 .cuerpo{
   float: left;
-  margin-top: 90px;
+  margin-top: 110px;
 }
 
 /* h1{
@@ -33,7 +33,7 @@ div.photo-container {
   width: 98%;
   margin-left: 1%;
   margin-right: 1%;
-  margin-top: 25px;
+  margin-top: 5px;
   padding: 10px;
 }
 
@@ -59,27 +59,20 @@ a.ver-categoria {
 
 /*media queries*/
 @media (min-width:768px) {
-  div.cuerpo{
+   .cuerpo {
     width: 100%;
-
+    margin-top: 0;
   }
 
   div.photo-container {
     float: left;
     width: 48%;
   }
+}
 
   @media (min-width:1024px) {
-
-    .logo a img{
-      width: 70px;
-    }
-
-    .logo a p{
-      margin-top: 10px;
-      font-size: 16px;
-    }
 
     div.photo-container {
       width: 31.3%;
     }
+  }
