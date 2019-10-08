@@ -9,24 +9,18 @@
 }
 
 .cuerpo{
-  width: 100%;
-  position: absolute;
-  top: 140px;
-  left:7%;
-}
-
-div.container{
+  float: left;
+  margin-top: 110px;
   width: 100%;
   text-align: center;
 }
-
 
 /*-- Campos a llenar -- */
 label {
   float: left;
   width: 100%;
-  margin-top: 12px;
-  padding: 4px;
+  margin-top: 8px;
+  padding: 3px;
   font-family: 'Quicksand', sans-serif;
 }
 

@@ -108,7 +108,7 @@ $textoBanner="Registro";
                 <br>
                   <?= $errores['apellido'] ?? '' ?>
                   <br>
-                <label for="avatar">Subir foto</label>
+                <label for="avatar">Subir foto de perfil</label>
                 <input type="file"  id="avatar" name="avatar">
                 <br>
                 <?= $errorArchivo ?>
@@ -158,7 +158,7 @@ $textoBanner="Registro";
                 <br>
                 <input class="check" type="checkbox" name="newsletter" value=""> Deseo recibir ofertas por mail.
                 <br>
-                <button type="submit" name="button">REGISTRO</button>
+                <button type="submit" name="button">Registro</button>
           </form>
             </main>
     <!-- Inicio Footer -->

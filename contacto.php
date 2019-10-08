@@ -37,6 +37,7 @@
       <textarea id="mensaje" name="mensaje" rows="" cols="" required></textarea>
       <br>
       <button type="submit" name="button">Enviar</button>
+    </main>
       <!-- Inicio Footer -->
         <?php require('partials/footer.php') ?>
       </div>

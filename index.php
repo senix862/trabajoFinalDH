@@ -21,7 +21,6 @@
       <div class="cuerpo">
       <!-- Arranca el main-->
       <main>
-        <!-- Banner -->
         <!-- Productos por categorías -->
         <section class="productos">
           <article class="aros">
@@ -47,6 +46,18 @@
               <img class="foto" src="img/anillos/anilloAmatista-art255.jpg" alt="art255">
               <a class="ver-categoria" href="productos.php#verAnillos">Anillos</a>
             </div>
+          </article>
+          <article class="aros">
+    				<div class="photo-container">
+    					<img class="foto" src="img/aros/arosZafiroAzul-art376.jpg" alt="art376">
+              <a class="ver-categoria" href="productos.php#verAros">Aros</a>
+    				</div>
+          </article>
+          <article class="dijes">
+    				<div class="photo-container">
+    					<img class="foto" src="img/dijes/rodoRedonda-art59.jpg" alt="art59">
+              <a class="ver-categoria" href="productos.php#verDijes">Dijes</a>
+    				</div>
           </article>
         </section>
       </main>

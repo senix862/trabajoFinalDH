@@ -9,11 +9,11 @@
 }
 
 .cuerpo{
-  position: absolute;
-  top: 120px;
+  float: left;
+  margin-top: 90px;
 }
 
-h1{
+/* h1{
   text-align: center;
   width: 85%;
   position: absolute;
@@ -21,11 +21,11 @@ h1{
   left: 7.5%;
   border: solid black 3px;
   padding: 6vh;
-}
+} */
 
-.productos{
+/* .productos{
   overflow: hidden;
-}
+} */
 
 div.photo-container {
   float: left;
@@ -59,8 +59,9 @@ a.ver-categoria {
 
 /*media queries*/
 @media (min-width:768px) {
-  .container{
-    max-width: 768px;
+  div.cuerpo{
+    width: 100%;
+
   }
 
   div.photo-container {
@@ -69,9 +70,6 @@ a.ver-categoria {
   }
 
   @media (min-width:1024px) {
-    header{
-      height: 110px;
-    }
 
     .logo a img{
       width: 70px;
@@ -82,17 +80,6 @@ a.ver-categoria {
       font-size: 16px;
     }
 
-    .container{
-      width:100%;
-    }
-
     div.photo-container {
-      float: left;
-      width: 28%;
-      margin-left: 3%;
-    }
-  @media (min-width:1440px) {
-    .container{
-      width: 100%;
-    }
+      width: 31.3%;
     }
