@@ -16,6 +16,7 @@ session_start();
     //si existe lo logeo
        $_SESSION['email'] = $email;
        $_SESSION['avatar'] = $usuario['avatar'];
+       $_SESSION['nombre'] = $usuario['nombre'];
    } else {
        destruirRecuerdame();
        //sino lo redirijo a login

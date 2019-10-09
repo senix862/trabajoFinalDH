@@ -10,7 +10,7 @@
     $secciones["Ingresar"] = "login.php";
   } elseif (estaElUsuarioLogeado() == true ) {
     $secciones["Mi Perfil"] = "profile.php";
-    $secciones["Salir"] = "partials/logout.php";
+    $secciones["Salir"] = "logout.php";
   }
  ?>
 

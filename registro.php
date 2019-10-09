@@ -2,7 +2,7 @@
 
 require_once('partials/paises.php');
 require_once('funciones/usuarios.php');
-require_once('funciones/curl.php');
+/*require_once('funciones/curl.php');*/
 require_once('funciones/validarRegistro.php');
 require_once('funciones/autoload.php');
 
@@ -15,6 +15,11 @@ if (isset($_COOKIE['recuerdame'])) {
   $apellido = "";
   $email = "";
 
+  if($_POST){
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $email = $_POST['email'];
+  }
 
   if (estaElUsuarioLogeado() == true) {
     header('location:profile.php');
@@ -78,7 +83,7 @@ $password2 = $_POST["password2"];
 }
 // guardarUsuario($usuario);
 
-logear($email);
+//logear($email);
 
 if (empty($errores)) header("location:profile.php");
 
@@ -111,7 +116,7 @@ $textoBanner="Registro";
 
                 <label for="nombre">Nombre:</label>
                 <br>
-                <input type="text" name="nombre" value="<?=$nombre?>" >
+                <input type="text" name="nombre" value="<?=$nombre?>">
                 <br>
                   <?= $errores['nombre'] ?? '' ?>
                   <br>
@@ -132,13 +137,13 @@ $textoBanner="Registro";
                 <label for="pais">País:</label>
                 <br>
                 <select name="pais">
-                  <?php foreach ($paises as $key => $pais) : ?>
+                  <?php foreach ($paises as $pais) : ?>
                     <?php if ($_POST["pais"] == $pais) : ?>
-                      <option value="<?=$key?>" selected>
+                      <option value="<?=$pais?>" selected>
                         <?=$pais?>
                       </option>
                     <?php else: ?>
-                    <option value="<?=$key?>">
+                    <option value="<?=$pais?>">
                       <?=$pais?>
                     </option>
                   <?php endif; ?>

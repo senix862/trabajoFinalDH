@@ -1,5 +1,9 @@
 <?php
-  $usuario = "Carlos";
+  require_once('funciones/autoload.php');
+  if (!estaElUsuarioLogeado()) {
+    header('location:index.php');
+  }
+  $usuario = $_SESSION['email'];
 
   $textoBanner = "Bienvenidx " . $usuario;
 ?>
