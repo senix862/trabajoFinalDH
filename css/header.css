@@ -168,8 +168,10 @@ h1{
    padding-left: 1%;
  }
 .menuHor ul {
-    display: inline-block;
+    display: flex;
     overflow: hidden;
+    width: 100%;
+    justify-content: space-between;
 }
 .menuHor ul li {
   float: left;
@@ -178,7 +180,6 @@ h1{
   background: rgb(255, 199, 236);
   line-height: 26px;
   border-radius: 10px;
-  margin-left: 30px;
   margin-bottom: 2px;
 }
 

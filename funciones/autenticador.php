@@ -12,7 +12,7 @@ session_start();
    //Busco al usuario en la BD
    $usuario = buscarUsuarioEmail($email);
 
-   if ($usuario) {
+   if ($usuario !== 0) {
     //si existe lo logeo
        $_SESSION['email'] = $email;
        $_SESSION['avatar'] = $usuario['avatar'];

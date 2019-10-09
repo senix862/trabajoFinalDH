@@ -76,7 +76,7 @@ $password2 = $_POST["password2"];
       // $usuario = peticionCurl('http://apiusers.juancarlosdh.dhalumnos.com/api/users', 'POST', $datos);
     }
 }
-guardarUsuario($usuario);
+// guardarUsuario($usuario);
 
 logear($email);
 
