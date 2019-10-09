@@ -85,12 +85,14 @@ $textoBanner="Ingresar";
               <?= (isset($errores["password"]) ? $errores["password"] : "")?>
             </div>
             <div class="cookie">
-              <input type="checkbox" id="recuerdame" name="recuerdame" class="form-check">
-            <label for="recuerdame">Mantenerme Conectado</label>
+
+            <input type="checkbox" id="recuerdame" name="recuerdame" class="form-check">
+            <label id="recuerd" for="recuerdame">Mantenerme Conectado</label>
+
             </div>
             <a href="#">olvidé mi contraseña</a>
             <br>
-            <button type="submit" name="button">Ingresar</button>
+            <button id="ingresar" type="submit" name="button">Ingresar</button>
           </form>
             <a href="registro.php">Registrarme</a>
         </div>

@@ -105,7 +105,7 @@ $textoBanner="Registro";
   <body>
       <div class="container">
         <!-- Header -->
-        <?php require_once('partials/header.php') ?>
+        <?php require_once('partials/header.php'); ?>
         <!-- CONTENIDO -->
           <div class="cuerpo">
         <!-- Arranca el main-->
@@ -176,7 +176,7 @@ $textoBanner="Registro";
                 <br>
                 <input class="check" type="checkbox" name="newsletter" value=""> Deseo recibir ofertas por mail.
                 <br>
-                <button type="submit" name="button">Registro</button>
+                <button id="registro" type="submit" name="button">Registro</button>
           </form>
             </main>
     <!-- Inicio Footer -->
