@@ -34,18 +34,10 @@
            <div class="item-description">
              <p class="item-description">Se trata de una piedra semipreciosa, compuesta por carbonato de Manganeso, es este último el que determina ese fuerte color rosado o púrpura, que se va aclarando a medida que en su composición se ve reemplazado el Manganeso (Mn) por otros componentes. Su nombre proviene de dos vocablos griegos, a raiz de su color, rodo - rosa y crosita - color. En Argentina es considerada como piedra nacional, se encuentra en las SIERRAS CAPILLITAS, pertenecientes al Nevado de Aconquija, provincia de Catamarca, Argentina, a 3200 metros de altura sobre el nivel del mar.
  Se la trabaja especialmente para la joyería, aunque tiene su hueco dentro de la decoración y es un mineral muy cotizado en el coleccionismo. Representa el amor desinteresado y la compasión. Es una piedra que imparte una actitud dinámica y positiva, es excelente para el corazón enseñándole a asimilar los sentimientos dolorosos. <b>Es la piedra del amor.</b></p>
-             
+
            </div>
             <div class="item-optionals">
               <ul>
-                <li class="item-optionals-item">
-                  <span>Fabricante:</span>
-                  <strong>Annello</strong>
-                </li>
-                <li class="item-optionals-item">
-                  <span>Marca:</span>
-                  <strong>Annello</strong>
-                </li>
                 <li class="item-optionals-item">
                   <span>Modelo:</span>
                   <strong>Ovalado</strong>
@@ -55,20 +47,8 @@
                   <strong>Plata</strong>
                 </li>
                 <li class="item-optionals-item">
-                  <span>Tipo de anillo:</span>
-                  <strong>con piedras</strong>
-                </li>
-                <li class="item-optionals-item">
                   <span>Tipos de piedra:</span>
                   <strong>Rodocrosita</strong>
-                </li>
-                <li class="item-optionals-item">
-                  <span>Pureza de metal:</span>
-                  <strong>925</strong>
-                </li>
-                <li class="item-optionals-item">
-                  <span>Estilos:</span>
-                  <strong>Ovalado</strong>
                 </li>
               </ul>
             </div>

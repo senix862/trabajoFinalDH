@@ -2,7 +2,7 @@
 
 require_once('partials/paises.php');
 require_once('funciones/usuarios.php');
-require_once('funciones/curl.php');
+/*require_once('funciones/curl.php');*/
 require_once('funciones/validarRegistro.php');
 require_once('funciones/autoload.php');
 
@@ -15,6 +15,11 @@ if (isset($_COOKIE['recuerdame'])) {
   $apellido = "";
   $email = "";
 
+  if($_POST){
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $email = $_POST['email'];
+  }
 
   if (estaElUsuarioLogeado() == true) {
     header('location:profile.php');
@@ -36,7 +41,8 @@ if($_POST){
   if(isset($_POST['terminos'])){
     $terminos = $_POST['terminos'];
   }
-  $usuario=[
+
+  $usuario= new Usuario ($_POST["nombre"], $_POST["apellido"], $_POST["email"],$_POST["password"],$_POST["pais"] )[
     "nombre" => $_POST["nombre"],
     "apellido" => $_POST["apellido"],
     "paises" => $_POST["pais"],
@@ -76,9 +82,9 @@ $password2 = $_POST["password2"];
       // $usuario = peticionCurl('http://apiusers.juancarlosdh.dhalumnos.com/api/users', 'POST', $datos);
     }
 }
-guardarUsuario($usuario);
+// guardarUsuario($usuario);
 
-logear($email);
+//logear($email);
 
 if (empty($errores)) header("location:profile.php");
 
@@ -100,7 +106,7 @@ $textoBanner="Registro";
   <body>
       <div class="container">
         <!-- Header -->
-        <?php require_once('partials/header.php') ?>
+        <?php require_once('partials/header.php'); ?>
         <!-- CONTENIDO -->
           <div class="cuerpo">
         <!-- Arranca el main-->
@@ -111,7 +117,7 @@ $textoBanner="Registro";
 
                 <label for="nombre">Nombre:</label>
                 <br>
-                <input type="text" name="nombre" value="<?=$nombre?>" >
+                <input type="text" name="nombre" value="<?=$nombre?>">
                 <br>
                   <?= $errores['nombre'] ?? '' ?>
                   <br>
@@ -132,13 +138,13 @@ $textoBanner="Registro";
                 <label for="pais">País:</label>
                 <br>
                 <select name="pais">
-                  <?php foreach ($paises as $key => $pais) : ?>
+                  <?php foreach ($paises as $pais) : ?>
                     <?php if ($_POST["pais"] == $pais) : ?>
-                      <option value="<?=$key?>" selected>
+                      <option value="<?=$pais?>" selected>
                         <?=$pais?>
                       </option>
                     <?php else: ?>
-                    <option value="<?=$key?>">
+                    <option value="<?=$pais?>">
                       <?=$pais?>
                     </option>
                   <?php endif; ?>
@@ -171,7 +177,7 @@ $textoBanner="Registro";
                 <br>
                 <input class="check" type="checkbox" name="newsletter" value=""> Deseo recibir ofertas por mail.
                 <br>
-                <button type="submit" name="button">Registro</button>
+                <button id="registro" type="submit" name="button">Registro</button>
           </form>
             </main>
     <!-- Inicio Footer -->

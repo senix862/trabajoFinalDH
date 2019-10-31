@@ -1,6 +1,5 @@
 <?php
-// require_once('funciones/autoload.php');
-require_once('funciones/autenticador.php');
+require_once('funciones/autoload.php');
 
 deslogear();
 

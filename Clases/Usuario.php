@@ -4,17 +4,16 @@ abstract class Usuario
 {
   private $nombre;
   private $apellido;
-  private $email;
-  private $password;
+  protected $email;
+  protected $password;
   private $nacionalidad;
-  private $avatar;
+  protected $avatar;
   private $cumpleaños;
   private $suscripcion;
-  private $administrador;
 
 
 
-  public function __construct($nombre, $apellido, $email, $password, $nacionalidad)
+  public function __construct(string $nombre, string $apellido, string $email, string $password, string $nacionalidad)
   {
     $this->nombre = $nombre;
     $this->apellido = $apellido;

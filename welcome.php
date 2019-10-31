@@ -1,5 +1,9 @@
 <?php
-  $usuario = "Carlos";
+  require_once('funciones/autoload.php');
+  if (!estaElUsuarioLogeado()) {
+    header('location:index.php');
+  }
+  $usuario = $_SESSION['nombre'];
 
   $textoBanner = "Bienvenidx " . $usuario;
 ?>
@@ -21,9 +25,9 @@
       <?php require_once('partials/header.php') ?>
       <!-- CONTENIDO -->
       <div class="cuerpo">
-        <a href="profile.php"><button type="submit" name="button">Ir a Mi Perfil</button></a>
-        <a href="index.php"><button type="submit" name="button">Ir al Inicio</button></a>
-        <a href="productos.php"><button type="submit" name="button">Ver Productos</button></a>
+        <a href="profile.php"><button class="welcome" type="submit" name="button">Ir a Mi Perfil</button></a>
+        <a href="index.php"><button class="welcome" type="submit" name="button">Ir al Inicio</button></a>
+        <a href="productos.php"><button class="welcome" type="submit" name="button">Ver Productos</button></a>
       <!-- Footer -->
         <?php require_once('partials/footer.php') ?>
       </div>

@@ -50,10 +50,16 @@ iframe{
  }
 
   .preguntas{
-    max-width: 720px;
+    max-width: 768px;
   }
 }
-  /* @media (min-width:1200px) {
-    .cuerpo{
-      width:100%;
-    } */
+  @media (min-width:1024px) {
+    .preguntas{
+      max-width: 1024px;
+      width: 80%;
+      margin-left: 10%;
+    }
+    @media (min-width:1440px) {
+      .preguntas{
+        max-width: 1440px;
+      }

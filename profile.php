@@ -5,7 +5,7 @@ if (isset($_COOKIE['recuerdame'])) {
     logear($_COOKIE['recuerdame']);
 }
 
-if (estaElUsuarioLogeado() == false) {
+if (!estaElUsuarioLogeado()) {
   header('location:login.php');
 }
 
@@ -41,7 +41,7 @@ if (estaElUsuarioLogeado() == false) {
             <div class="img-background">
               <!-- <img src="https://rotary6690.org/wp-content/plugins/dacdbplus/img/no_image.jpg"> -->
               <!-- <i id="pencil" class="fas fa-pencil-alt"></i> -->
-              <img src="https://rotary6690.org/wp-content/plugins/dacdbplus/img/no_image.jpg">
+              <img src="<?=$_SESSION['avatar']?>">
             </div>
             <br>
             <h5>Email: <?=$_SESSION['email']?></h5>

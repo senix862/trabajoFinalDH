@@ -1,11 +1,11 @@
 <?php
   require_once('funciones/autoload.php');
 
-  // if (isset($_COOKIE['recuerdame'])) {
-  //     logear($_COOKIE['recuerdame']);
-  // }
+   if (isset($_COOKIE['recuerdame'])) {
+      logear($_COOKIE['recuerdame']);
+   }
 
-  if (estaElUsuarioLogeado() == true) {
+  if (estaElUsuarioLogeado()) {
     header('location:profile.php');
   }
 
@@ -32,8 +32,8 @@
                 //Si encontré al usuario, lo logeo
                 $_SESSION['email'] = $email;
                 $_SESSION['avatar'] = $usuario['avatar'];
-                $_SESSION['nombre'] = $nombre;
-
+                $_SESSION['nombre'] = $usuario['nombre'];
+                
                 //si chequeamos el recuerdame
                 if (isset($_POST['recuerdame'])) {
                     //guardamos la cookie del email
@@ -85,12 +85,14 @@ $textoBanner="Ingresar";
               <?= (isset($errores["password"]) ? $errores["password"] : "")?>
             </div>
             <div class="cookie">
-              <input type="checkbox" id="recuerdame" name="recuerdame" class="form-check">
-            <label for="recuerdame">Mantenerme Conectado</label>
+
+            <input type="checkbox" id="recuerdame" name="recuerdame" class="form-check">
+            <label id="recuerd" for="recuerdame">Mantenerme Conectado</label>
+
             </div>
             <a href="#">olvidé mi contraseña</a>
             <br>
-            <button type="submit" name="button">Ingresar</button>
+            <button id="ingresar" type="submit" name="button">Ingresar</button>
           </form>
             <a href="registro.php">Registrarme</a>
         </div>

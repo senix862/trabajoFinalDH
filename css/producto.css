@@ -112,3 +112,9 @@ button#comprar {
     margin-left: 30%;
     width: 40%;
   }
+  @media (min-width:1440px) {
+  .container{
+    width: 100%;
+  }
+
+  }

@@ -8,25 +8,27 @@
   box-sizing: border-box;
 }
 
-div.container{
+/* div.container{
   width: 100%
   text-align: center;
   position: relative;
-}
+} */
 .cuerpo{
-  position: absolute;
-  top: 180px;
+  float: left;
+  margin-top: 120px;
+  width: 100%;
+  text-align: center;
 }
 
 
 
 /* Campos a llenar */
 
-button {
+button.welcome{
   color: white;
   background-color:rgb(165, 96, 143);
   text-align: center;
-  width: 28%;
+  width: 50%;
   max-width: 200px;
   margin: 10px;
   right: 0;
@@ -40,11 +42,6 @@ button {
 
 /*media queries*/
 @media (min-width:768px) {
-  .container{
-    max-width: 720px;
+  .cuerpo{
+    margin-top: 10px;
   }
-
-  @media (min-width:1200px) {
-    .container{
-      width:100%;
-    }
