@@ -26,6 +26,11 @@
 
         $archivo = file_get_contents('dataBase/usuarios.json');
         $usuarios = json_decode($archivo, true);
+        // $sql= select * from users where email = :email;
+        // $conexion= $conex->prepare($sql);
+        // $conexion->bindValue(":email",$email);
+        // $conexion->execute();
+        // $usuarios=$conexion->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($usuarios as $usuario) {
             if ($usuario['email'] == $email && password_verify($password, $usuario['password'])) {
@@ -33,9 +38,9 @@
                 $_SESSION['email'] = $email;
                 $_SESSION['avatar'] = $usuario['avatar'];
                 $_SESSION['nombre'] = $usuario['nombre'];
-                
+
                 //si chequeamos el recuerdame
-                if (isset($_POST['recuerdame'])) {
+                if ($_POST['recuerdame']='') {
                     //guardamos la cookie del email
                     setcookie('recuerdame', $email, time() + 60*60*24);
                 }
