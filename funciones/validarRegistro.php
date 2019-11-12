@@ -1,13 +1,13 @@
 <?php
-
-function validarRegistro($datos, $password2, $terminos) {
+class ValidarRegistro extends Usuario{
+function validarRegistro(Usuario $usuario) {
     $errores = [];
 
-    $email = trim($datos['email']);
-    $password = $datos['password'];
-    $nombre = trim($datos['nombre']);
-    $apellido = trim($datos['apellido']);
-    $paises = $datos['paises'];
+    $email = trim(setEmail($usuario->email));
+    $password = $usuario->password;
+    $nombre = $usuario->nombre;
+    $apellido = $usuario->apellido;
+    $nacionalidad = $usuario->nacionalidad;
 
 
     if (strlen($email) === 0) {
@@ -15,10 +15,13 @@ function validarRegistro($datos, $password2, $terminos) {
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errores['email'] = 'El e-mail no es válido';
     }
+
     //Ahora validamos @email
-    $usuario = file_get_contents('dataBase/usuarios.json');
-    //lo transformo a variables en php
-    $usuarios = json_decode($usuario, true);
+$db = new PDO($host, $db_user, $db_pass, $opt);
+$query = $db->prepare('SELECT * from usuarios');
+$query->execute();
+$usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
+
     foreach($usuarios as $usuario){
       if($email == $usuario['email']){
         $errores['email'] = 'El email ya esta registrado';
@@ -46,4 +49,5 @@ function validarRegistro($datos, $password2, $terminos) {
             $errores['terminos'] = 'Debe aceptar los términos y condiciones';
           }
     return $errores;
+}
 }

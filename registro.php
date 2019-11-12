@@ -1,10 +1,10 @@
 <?php
 
 require_once('partials/paises.php');
-require_once('funciones/usuarios.php');
-/*require_once('funciones/curl.php');*/
-require_once('funciones/validarRegistro.php');
-require_once('funciones/autoload.php');
+require_once('Clases/Usuario.php');
+require('conexion.php');
+require('funciones/ValidarRegistro.php');
+require_once('Clases/autoloadClases.php');
 
 if (isset($_COOKIE['recuerdame'])) {
       logear($_COOKIE['recuerdame']);
@@ -21,7 +21,7 @@ if (isset($_COOKIE['recuerdame'])) {
     $email = $_POST['email'];
   }
 
-  if (estaElUsuarioLogeado() == true) {
+  if (estaElUsuarioLogeado()) {
     header('location:profile.php');
   }
 
@@ -42,16 +42,16 @@ if($_POST){
     $terminos = $_POST['terminos'];
   }
 
-  $usuario= new Usuario ($_POST["nombre"], $_POST["apellido"], $_POST["email"],$_POST["password"],$_POST["pais"] )[
-    "nombre" => $_POST["nombre"],
-    "apellido" => $_POST["apellido"],
-    "paises" => $_POST["pais"],
-    "email" => $_POST["email"],
-    "password" => $_POST["password"],
-      ];
-$password2 = $_POST["password2"];
 
- $errores = validarRegistro($usuario, $password2, $terminos);
+  $nombre = $_POST["nombre"];
+  $apellido = $_POST["apellido"];
+  $email = $_POST["email"];
+  $password = $_POST["password"];
+  $nacionalidad = $_POST["pais"];
+  $password2 = $_POST["password2"];
+//Aca creamos el objeto Usuario
+  $usuario = new Usuario ($nombre, $apellido, $email, $password, $nacionalidad);
+  $errores = validarRegistro($usuario, $password2, $terminos);
   if (empty($error) && empty($errores)) {
     // Acá se sube la imagen
     if ($_FILES["avatar"]["error"]===0) {
@@ -63,28 +63,35 @@ $password2 = $_POST["password2"];
       }
     }
     // Acá guardamos la contraseña
-      if ($_POST["password"] === $_POST["password2"]) {
-        $usuario["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
-      //Aca creamos el usuario
-        $usuarios = file_get_contents("dataBase/usuarios.json");
-        $usuariosArray= json_decode($usuarios,true);
-        $usuariosArray[]=$usuario;
-        $usuariosJson= json_encode($usuariosArray);
-        file_put_contents('dataBase/usuarios.json', $usuariosJson);
+      if ($password === $password2) {
+        $usuario->password = password_hash($_POST["password"], PASSWORD_DEFAULT);
       }
-  //deberia hacerse solo si no hay errores
+      //buscar el email repetido
+      $validator = $conex->query("");
+      $cantidad = $validator->rowCount();
+      // var_dump($cantidad);exit;
+      if($cantidad==0){
+          $query = $conex->query("");
+          $query->execute();
 
-      $datos = [
-          'team' => 'grupo5',
-          'commission' => 'tarde',
-          'json_data' => $usuario,
-        ];
-      // $usuario = peticionCurl('http://apiusers.juancarlosdh.dhalumnos.com/api/users', 'POST', $datos);
+
+      } else {
+          $errorEmail = 'El mail existe';
+          $invalidError = 'is-invalid';
+      }
     }
 }
-// guardarUsuario($usuario);
 
-//logear($email);
+function insertarUsuario(PDO $db) {
+    $nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $email = $_POST["email"];
+ $query = $db->prepare("INSERT into usuarios values (null, :nombre, :apellido, :email)");
+  $query->bindValue(":nombre", $nombre);
+  $query->bindValue(":apellido", $apellido);
+  $query->bindValue(":email", $email);
+ $usuario = $query->execute();
+}
 
 if (empty($errores)) header("location:profile.php");
 
@@ -106,7 +113,7 @@ $textoBanner="Registro";
   <body>
       <div class="container">
         <!-- Header -->
-        <?php require_once('partials/header.php'); ?>
+        <?php require_once('header.php'); ?>
         <!-- CONTENIDO -->
           <div class="cuerpo">
         <!-- Arranca el main-->

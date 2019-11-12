@@ -17,7 +17,7 @@ $textoBanner="Contacto";
   <body>
     <div class="container">
       <!-- Header -->
-      <?php require_once('partials/header.php') ?>
+      <?php require_once('header.php') ?>
       <!-- CONTENIDO -->
       <div class="cuerpo">
       <!-- Arranca el main-->

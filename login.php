@@ -1,9 +1,9 @@
 <?php
-  require_once('funciones/autoload.php');
+  require_once('Clases/autoloadClases.php');
 
-   if (isset($_COOKIE['recuerdame'])) {
-      logear($_COOKIE['recuerdame']);
-   }
+   // if (isset($_COOKIE['recuerdame'])) {
+   //    logear($_COOKIE['recuerdame']);
+   // }
 
   if (estaElUsuarioLogeado()) {
     header('location:profile.php');

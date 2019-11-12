@@ -1,5 +1,5 @@
 <?php
-// require_once('../funciones/autoload.php');
+require_once('../Clases/autoloadClases.php');
 $textoBanner = "Nuevo Producto";
 ?>
 
@@ -12,14 +12,16 @@ $textoBanner = "Nuevo Producto";
   <body>
     <div class="container">
       <!-- Header -->
-      <?php require_once('../partials/header.php'); ?>
+     <?php require_once('../partials/header.php'); ?>
       <!-- CONTENIDO -->
         <div class="cuerpo">
       <!-- Arranca el main-->
           <main>
             <!-- Campos a llenar -->
 
-            <form class="" action="cargarProd.php" method="post" enctype="multipart/form-data">
+            <form class="" action="?producto_id=<?=$_GET['id']?>" method="post" enctype="multipart/form-data">
+
+              <input type="hidden" name="producto_id" value="<?=$_GET['id']?>">
 
               <label for="nombre">Nombre del producto:</label>
               <br>
@@ -88,7 +90,7 @@ $textoBanner = "Nuevo Producto";
         </form>
           </main>
   <!-- Inicio Footer -->
-    <?php require('partials/footer.php') ?>
+    <?php require('../partials/footer.php') ?>
   </div>
 </div>
   </body>

@@ -1,6 +1,15 @@
 <?php
-
 $textoBanner="Preguntas Frecuentes";
+class Faq {
+
+  public function setFaq($faq){
+    $this->faq = $faq;
+  }
+  public function getFaq(){
+    return $this->faq;
+  }
+
+}
 
 ?>
 
@@ -20,7 +29,7 @@ $textoBanner="Preguntas Frecuentes";
   <body>
     <div class="container">
       <!-- Header -->
-      <?php require_once('partials/header.php'); ?>
+      <?php require_once('header.php'); ?>
       <!-- CONTENIDO -->
       <div class="cuerpo">
       <!-- Arranca el main-->

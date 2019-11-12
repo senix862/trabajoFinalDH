@@ -1,13 +1,12 @@
 <?php
 
-abstract class Usuario
-{
+class Usuario {
   private $nombre;
   private $apellido;
-  protected $email;
-  protected $password;
+  private $email;
+  private $password;
   private $nacionalidad;
-  protected $avatar;
+  private $avatar;
   private $cumpleaños;
   private $suscripcion;
 
@@ -25,25 +24,25 @@ abstract class Usuario
   public function setNombre($nombre){
     $this->nombre = $nombre;
   }
-  public function getNombre(){
+  public function getNombre(): string{
     return $this->nombre;
   }
   public function setApellido($apellido){
     $this->apellido = $apellido;
   }
-  public function getApellido(){
+  public function getApellido(): string{
     return $this->apellido;
   }
   public function setEmail($email){
     $this->email = $email;
   }
-  public function getEmail(){
+  public function getEmail(): string{
     return $this->email;
   }
   public function setPass($password){
     $this->password = $password;
   }
-  public function getPass(){
+  public function getPass(): string{
     return $this->password;
   }
   public function setNacionalidad($nacionalidad){
@@ -55,7 +54,7 @@ abstract class Usuario
   public function setAvatar($avatar){
     $this->avatar = $avatar;
   }
-  public function getAvatar(){
+  public function getAvatar(): string{
     return $avatar->avatar;
   }
   public function setCumple($cumpleaños){
@@ -67,39 +66,38 @@ abstract class Usuario
   public function setSuscripcion($suscripcion){
     $this->suscripcion = $suscripcion;
   }
-  public function getSuscripcion(){
+  public function getSuscripcion(): bool{
     return $this->suscripcion;
-  }
-  public function setAdmin($administrador){
-    $this->administrador = $administrador;
-  }
-  public function getAdministrador(){
-    return $this->administrador;
   }
 
   protected function hashPassword(string $password)
   {
       return password_hash($password, PASSWORD_DEFAULT);
   }
-  public function suscribirUsuario(Usuario){
+  public function suscribirUsuario(Usuario $usuario){
 
   }
-  public function buscarProducto(string){
+  public function buscarProducto(Producto $producto){
 
   }
-  public function enviarMensaje(string){
-
+  public function keepConect(Usuario $usuario) {
+    return ;
   }
-  public function agregarAlCarrito(Producto){
 
-  }
-  public function quitarDelCarrito(Producto){
 
-  }
-  public function agregarAfavoritos(Producto){
-
-  }
-  public function quitarDefavoritos(Producto){
-
-  }
+  // public function enviarMensaje(string){
+  //
+  // }
+  // public function agregarAlCarrito(Producto){
+  //
+  // }
+  // public function quitarDelCarrito(Producto){
+  //
+  // }
+  // public function agregarAfavoritos(Producto){
+  //
+  // }
+  // public function quitarDefavoritos(Producto){
+  //
+  // }
 }

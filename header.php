@@ -1,14 +1,14 @@
 <?php
-  require_once('../Clases/autoloadClases.php');
+  require_once('Clases/autoloadClases.php');
   $secciones = [
     "Home" => "index.php",
     "Preguntas Frecuentes" => "faq.php",
     "Contacto" => "contacto.php",
   ];
-  if (estaElUsuarioLogeado() == false) {
+  if (!estaElUsuarioLogeado()) {
     $secciones["Registrarse"] = "registro.php";
     $secciones["Ingresar"] = "login.php";
-  } elseif (estaElUsuarioLogeado() == true ) {
+  } elseif (estaElUsuarioLogeado()) {
     $secciones["Mi Perfil"] = "profile.php";
     $secciones["Salir"] = "logout.php";
   }
