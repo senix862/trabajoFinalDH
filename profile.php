@@ -1,5 +1,5 @@
 <?php
-require_once('funciones/autoload.php');
+require_once('Clases/autoloadClases.php');
 
 if (isset($_COOKIE['recuerdame'])) {
     logear($_COOKIE['recuerdame']);
@@ -31,7 +31,7 @@ if (!estaElUsuarioLogeado()) {
   <body>
     <div class="container">
       <!-- Header -->
-      <?php require_once('partials/header.php') ?>
+      <?php require_once('header.php') ?>
       <!-- CONTENIDO -->
       <div class="cuerpo">
       <!-- Arranca el main-->

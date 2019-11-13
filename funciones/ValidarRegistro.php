@@ -1,14 +1,16 @@
 <?php
-class ValidarRegistro extends Usuario{
-function validarRegistro(Usuario $usuario) {
+class ValidarRegistro {
+
+public function validarRegistro($datos,$db) {
     $errores = [];
 
-    $email = trim(setEmail($usuario->email));
-    $password = $usuario->password;
-    $nombre = $usuario->nombre;
-    $apellido = $usuario->apellido;
-    $nacionalidad = $usuario->nacionalidad;
-
+    $email = trim($datos["email"]);
+    $password = $datos["password"];
+    $password2 = $datos["password2"];
+    $nombre = $datos["nombre"];
+    $apellido = $datos["apellido"];
+    $nacionalidad = $datos["pais"];
+    $terminos = $datos["terminos"];
 
     if (strlen($email) === 0) {
         $errores['email'] = 'Escriba su email';
@@ -17,7 +19,7 @@ function validarRegistro(Usuario $usuario) {
     }
 
     //Ahora validamos @email
-$db = new PDO($host, $db_user, $db_pass, $opt);
+
 $query = $db->prepare('SELECT * from usuarios');
 $query->execute();
 $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -42,7 +44,7 @@ $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
       if (strlen($apellido) === 0) {
           $errores['apellido'] = 'Ingrese su apellido';
         }
-        if (!$paises) {
+        if (!$nacionalidad) {
             $errores['paises'] = 'Seleccione un país';
           }
           if(($terminos)!=1){

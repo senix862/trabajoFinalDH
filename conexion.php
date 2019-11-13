@@ -5,7 +5,7 @@ try{
     //esto codifica para que no tenga errores de acentos
             PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"];
 
-    $conex = new PDO('mysql:host=localhost;dbname=blackbird', 'root', null, $opt);
+    $conex = new PDO('mysql:host=localhost;dbname=blackbird_db', 'root', 'root', $opt);
     //echo '<pre>';
     // var_dump($conex);
 

@@ -1,7 +1,7 @@
 <?php
 
 require_once('partials/paises.php');
-require_once('Clases/Usuario.php');
+// require_once('Clases/Usuario.php');
 require('conexion.php');
 require('funciones/ValidarRegistro.php');
 require_once('Clases/autoloadClases.php');
@@ -51,7 +51,10 @@ if($_POST){
   $password2 = $_POST["password2"];
 //Aca creamos el objeto Usuario
   $usuario = new Usuario ($nombre, $apellido, $email, $password, $nacionalidad);
-  $errores = validarRegistro($usuario, $password2, $terminos);
+  $validador = new ValidarRegistro();
+
+  $errores=$validador->validarRegistro($_POST,$conex);
+
   if (empty($error) && empty($errores)) {
     // Acá se sube la imagen
     if ($_FILES["avatar"]["error"]===0) {
@@ -64,36 +67,47 @@ if($_POST){
     }
     // Acá guardamos la contraseña
       if ($password === $password2) {
-        $usuario->password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+        $usuario->setPass(password_hash($_POST["password"], PASSWORD_DEFAULT));
       }
       //buscar el email repetido
-      $validator = $conex->query("");
-      $cantidad = $validator->rowCount();
+      // $validator = $conex->query("");
+      // $cantidad = $validator->rowCount();
       // var_dump($cantidad);exit;
-      if($cantidad==0){
-          $query = $conex->query("");
-          $query->execute();
+      // if($cantidad==0){
+      //     $query = $conex->query("");
+      //     $query->execute();
 
 
-      } else {
-          $errorEmail = 'El mail existe';
-          $invalidError = 'is-invalid';
-      }
+      // } else {
+      //     $errorEmail = 'El mail existe';
+      //     $invalidError = 'is-invalid';
+      // }
     }
-}
+
 
 function insertarUsuario(PDO $db) {
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
     $email = $_POST["email"];
- $query = $db->prepare("INSERT into usuarios values (null, :nombre, :apellido, :email)");
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+ $query = $db->prepare("INSERT into usuarios values (null, :nombre, :apellido, null, :email, :pass,null)");
   $query->bindValue(":nombre", $nombre);
   $query->bindValue(":apellido", $apellido);
   $query->bindValue(":email", $email);
- $usuario = $query->execute();
+  $query->bindValue(":pass",$password);
+  $query->execute();
 }
 
-if (empty($errores)) header("location:profile.php");
+if (empty($errores)){
+
+
+insertarUsuario($conex);
+header("location:profile.php");
+
+}
+}
+
+
 
 
 $textoBanner="Registro";
