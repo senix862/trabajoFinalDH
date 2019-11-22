@@ -17,6 +17,10 @@
 
 
 /*-- Campos a llenar -- */
+
+form{
+  text-align: center;
+}
 label {
   width: 100%;
   margin-top: 8px;

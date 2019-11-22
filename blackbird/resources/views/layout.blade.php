@@ -16,11 +16,11 @@
     <div class="container">
       <?php
       $secciones = [
-        "Home" => "index.php",
-        "Preguntas Frecuentes" => "faq.php",
-        "Contacto" => "contacto.php",
-        "Registrarse" => "registro.php",
-        "Ingresar" => "login.php"
+        "Home" => "blackbird",
+        "Preguntas Frecuentes" => "faq",
+        "Contacto" => "contacto",
+        "Registrarse" => "register",
+        "Ingresar" => "login"
       ];
       // if (!estaElUsuarioLogeado()) {
       //   $secciones["Registrarse"] = "registro.php";

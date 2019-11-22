@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Pais;
 
 class RegisterController extends Controller
 {
@@ -48,10 +49,21 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+
+      $imagen='';
+      if(isset($data['avatar'])){
+        $imagen = $data['avatar']->store('public');
+        $imagen= basename($imagen);
+      }
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'nombre' => ['required', 'string', 'max:255'],
+            'apellido' => ['required', 'string', 'max:255'],
+            'pais' => ['required'],
+            'avatar' => ['image','nullable']
+            'date' => ['required','date'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'terminos' => ['required'],
         ]);
     }
 
@@ -64,9 +76,14 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'nombre' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    public function showRegistrationForm(){
+      $paises= Pais::all();
+      return view('register',compact('paises'));
     }
 }
