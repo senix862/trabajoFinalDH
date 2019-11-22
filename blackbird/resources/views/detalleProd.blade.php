@@ -5,21 +5,21 @@
   @endsection
 
   @section('title')
-    Blackbird - Joyas y Bijouterie
+    Detalle
   @endsection
 
   @section('texto')
-    Productos Destacados
+    Detalle del Producto
   @endsection
 
 @section('main')
-  @foreach($prod as $producto)
     <section class="productos">
       <article>
         <div class="photo-container">
           <img class="foto" src="/img/aros/arosZafiroAzul-art376.jpg" alt="art376">
-          <a class="ver-categoria" href="">{{$producto->nombre}}</a>
+          <h2>{{$prod->nombre}}</h2>
+          <p>Precio: ${{$prod->precio}}</p>
+          <p>Stock: {{$prod->stock}}</p>
         </div>
       </article>
-  @endforeach
 @endsection

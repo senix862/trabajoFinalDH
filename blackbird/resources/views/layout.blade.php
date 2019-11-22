@@ -6,11 +6,11 @@
 
       @yield('css')
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-    <title>Blackbird - Joyas y Bijouterie</title>
+    <title>@yield('title')</title>
   </head>
   <body>
     <div class="container">
@@ -67,8 +67,6 @@
       <div class="carrito">
         <a href="carrito.php"><i class="fas fa-shopping-basket"></i></a>
       </div>
-
-
       </header>
       <div class="banner">
         <img src="/img/banner.png" alt="BANNER">
