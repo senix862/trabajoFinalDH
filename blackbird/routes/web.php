@@ -41,8 +41,8 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/contact', function () {
-    return view('welcome');
+Route::get('/contacto', function () {
+    return view('contacto');
 });
 
 Route::post('/profile', function () {

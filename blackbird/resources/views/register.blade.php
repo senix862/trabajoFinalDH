@@ -22,9 +22,9 @@
                   <div class="">
                       <form method="POST" action="{{ route('register') }}" enctype="multipart/formdata">
                           @csrf
-                            <label for="nombre">Nombre:</label>
+                            <label for="name">Nombre:</label>
                             <br>
-                            <input type="text" name="nombre" value="{{old('nombre')}}">
+                            <input type="text" name="name" value="{{old('name')}}">
                             <br>
 
                             <label for="apellido">Apellido:</label>
@@ -37,7 +37,7 @@
                               <option value="">seleccione un país</option>
                               <option
                               @foreach ($paises as $pais)
-                                <option value="{{old('pais')}}">{{$pais->pais}}</option>
+                                <option value="{{$pais->id}}">{{$pais->pais}}</option>
                             @endforeach
                             </select>
                             <br>
@@ -57,7 +57,7 @@
                             <input id="password" type="password" name="password" value="" >
                             <label for="password2">Repetir contraseña:</label>
                             <br>
-                            <input id="password2" type="password" name="password2" value="" >
+                            <input id="password2" type="password" name="password_confirmation" value="" >
                             <br>
                             <br>
                             <input class="check" type="checkbox" name="terminos" value="1" > Acepto los <a href="#">Términos y condiciones</a>.
@@ -66,4 +66,8 @@
                             <br>
                             <button id="registro" type="submit" name="button">Registro</button>
                       </form>
+@php
+var_dump($errors->all());
+@endphp
+
   @endsection

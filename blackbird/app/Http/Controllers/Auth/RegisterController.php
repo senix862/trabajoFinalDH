@@ -50,16 +50,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
 
-      $imagen='';
-      if(isset($data['avatar'])){
-        $imagen = $data['avatar']->store('public');
-        $imagen= basename($imagen);
-      }
         return Validator::make($data, [
-            'nombre' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'apellido' => ['required', 'string', 'max:255'],
             'pais' => ['required'],
-            'avatar' => ['image','nullable']
+            'avatar' => ['nullable','image'],
             'date' => ['required','date'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
@@ -75,10 +70,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $imagen='';
+        if(isset($data['avatar'])){
+          $imagen = $data['avatar']->store('public');
+          $imagen= basename($imagen);
+        }
         return User::create([
-            'nombre' => $data['name'],
+            'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'avatar' => $imagen
         ]);
     }
 
