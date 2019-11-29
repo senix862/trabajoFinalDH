@@ -19,8 +19,7 @@
 /* Campos a llenar */
 
 label {
-  float: left;
-  width: 100%;
+  width: auto;
   margin-top: 12px;
   padding: 4px;
   font-family: 'Quicksand', sans-serif;
@@ -33,7 +32,7 @@ input {
     padding: 3px;
 }
 label#recuerd{
-  float: none;
+  float: left;
   width: auto;
 }
 input#remember{
@@ -70,7 +69,9 @@ main .datos a{
   color: grey;
   text-decoration: underline;
 }
-
+div.cookie{
+  overflow:hidden;
+}
 div .datos .errores{
   margin-top: 2vh;
 }

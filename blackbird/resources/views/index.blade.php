@@ -17,7 +17,7 @@
     <section class="productos">
       <article>
         <div class="photo-container">
-          <img class="foto" src="/img/aros/arosZafiroAzul-art376.jpg" alt="art376">
+          <img class="foto" src="/storage/{{$producto->imagen}}" alt="">
           <a class="ver-categoria" href="">{{$producto->nombre}}</a>
         </div>
       </article>

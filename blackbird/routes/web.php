@@ -19,11 +19,9 @@ Route::get('/blackbird','ProductosController@listado');
 
 Route::get('/product/{id}', 'ProductosController@detalle');
 
-Route::get('/addProd', function () {
-    return view('addProd');
-});
+Route::get('/producto/nuevo', 'ProductosController@new');
 
-Route::post('/addProd', 'ProductosController@agregar');
+Route::post('/producto/nuevo', 'ProductosController@agregar');
 
 Route::get('/faq', function () {
     return view('faq');
