@@ -87,4 +87,5 @@ class RegisterController extends Controller
       $paises= Pais::all();
       return view('register',compact('paises'));
     }
+
 }
