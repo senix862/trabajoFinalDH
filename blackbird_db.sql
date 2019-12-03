@@ -1,8 +1,10 @@
--- MySQL dump 10.13  Distrib 5.7.26, for Linux (x86_64)
+CREATE DATABASE  IF NOT EXISTS `blackbird_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `blackbird_db`;
+-- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: blackbird_db
+-- Host: 127.0.0.1    Database: blackbird_db
 -- ------------------------------------------------------
--- Server version	5.7.26-0ubuntu0.18.10.1
+-- Server version	5.5.5-10.4.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -77,7 +79,7 @@ CREATE TABLE `failed_jobs` (
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -203,13 +205,15 @@ CREATE TABLE `productos` (
   `nombre` varchar(100) NOT NULL,
   `precio` decimal(10,0) NOT NULL,
   `descuento` int(10) unsigned DEFAULT NULL,
-  `stock` int(10) unsigned DEFAULT NULL,
+  `calorias` int(10) unsigned DEFAULT NULL,
   `historial_ventas` int(10) unsigned DEFAULT NULL,
   `categoria_id` int(11) DEFAULT NULL,
+  `imagen` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `imagen_UNIQUE` (`imagen`),
   KEY `categoria_id` (`categoria_id`),
   CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -218,7 +222,6 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'Dije Piedra Luna',500,NULL,5,NULL,1);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -240,7 +243,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -249,6 +252,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'mateo','mateo@mateo.com',NULL,'$2y$10$VxqHulSUhmmclwa7quuVsOghRhdftqNveOp.X5wHUByP8/fd.BFhO',NULL,'2019-12-03 03:12:43','2019-12-03 03:12:43');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -290,4 +294,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-27 16:11:19
+-- Dump completed on 2019-12-02 21:21:56
