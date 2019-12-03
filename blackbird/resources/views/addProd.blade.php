@@ -37,9 +37,9 @@
       @enderror
     </div>
     <div class="form-group">
-      <label for="stock">Stock: </label>
-      <input type="number" min="0" step="any" class="form-control" id="stock" name="stock"  value="{{old('stock')}}">
-      @error('stock')
+      <label for="calorias">Calorias: </label>
+      <input type="number" min="0" step="any" class="form-control" id="calorias" name="calorias"  value="{{old('calorias')}}">
+      @error('calorias')
           {{ $message }}
       @enderror
     </div>

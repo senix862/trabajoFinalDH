@@ -17,11 +17,16 @@ Route::get('/', function () {
 
 Route::get('/blackbird','ProductosController@listado');
 
-Route::get('/product/{id}', 'ProductosController@detalle');
+Route::get('/productos/{id}', 'ProductosController@detalle');
+Route::get('/productos/{id}/editar',"ProductosController@edit");
+Route::patch('/Productos/{id}', 'ProductosController@update');
+Route::delete('/productos/{id}', 'ProductosController@delete');
 
-Route::get('/producto/nuevo', 'ProductosController@new');
+Route::get('/productos', 'ProductosController@show');
 
-Route::post('/producto/nuevo', 'ProductosController@agregar');
+Route::get('/products/nuevo', 'ProductosController@new');
+
+Route::post('/productos/nuevo', 'ProductosController@agregar');
 
 Route::get('/faq', function () {
     return view('faq');

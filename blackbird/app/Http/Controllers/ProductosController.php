@@ -15,9 +15,9 @@ class ProductosController extends Controller
   }
 
   public function detalle($id){
-    $prod = Producto::find($id);
+    $producto = Producto::find($id);
 
-    return view('detalleProd', compact('prod'));
+    return view('detalleProducto', compact('producto'));
   }
 
 
@@ -27,19 +27,25 @@ class ProductosController extends Controller
       return view('addProd', compact('categorias'));
   }
 
-  public function agregar(Request $req){
+  public function agregar(Request $req)
+  {
     // $imagen = $data['imagen']->store('public');
     // $imagen= basename($imagen);
     $reglas = [
       "nombre" => "string|required",
       "precio" => "numeric|required",
-      "descuento" => "numeric",
-      "stock" => "integer|min:1",
-      "categoria" => "integer",
+      "descuento" => "numeric|between:1,99",
+      "calorias" => "integer|min:1",
+      "categoria" => "required",
       "imagen"=> "file"
     ];
     $mesagge= [
-      
+      'required' => 'Completa este campo',
+      'title.string' => 'El titulo debe ser un texto',
+      'numeric' => 'Debe ser un numero',
+      'between' => 'Debe de estar entre :min y :max',
+      'integer' => 'Debe ser un numero',
+
     ];
     $this->validate($req, $reglas, $mesagge);
 
@@ -50,12 +56,80 @@ class ProductosController extends Controller
     $prodNuevo->nombre = $req["nombre"];
     $prodNuevo->precio = $req["precio"];
     $prodNuevo->descuento = $req["descuento"];
-    $prodNuevo->stock = $req["stock"];
+    $prodNuevo->calorias = $req["calorias"];
     $prodNuevo->categoria_id = $req["categoria_id"];
     $prodNuevo->imagen = $imagenF;
 
     $prodNuevo->save();
 
-    return redirect("/detalleProd");
+    return redirect('/productos')
+        ->with('status', 'Creaste una hamburguesa nueva!!!')
+        ->with('operation', 'success');
   }
+
+public function edit($id)
+{
+    $producto = Producto::find($id);
+
+    $categorias = Categoria::all();
+
+    return view('editarProducto', compact(['producto', 'categorias']));
 }
+
+public function update(Request $request, $id)
+{
+    //primero valido los datos
+    $reglas = [
+      "nombre" => "string|required",
+      "precio" => "numeric|required",
+      "descuento" => "numeric|between:1,99",
+      "calorias" => "integer|min:1",
+      "categoria" => "required",
+      "imagen"=> "file"
+    ];
+    $mesagge= [
+      'required' => 'Completa este campo',
+      'title.string' => 'El titulo debe ser un texto',
+      'numeric' => 'Debe ser un numero',
+      'between' => 'Debe de estar entre :min y :max',
+      'integer' => 'Debe ser un numero',
+
+    ];
+    $this->validate($req, $reglas, $mesagge);
+
+    $nuevaBurger = Producto::find($id);
+    $imagen = $req->file('imagen')->store('public');
+    $imagenF= basename($imagen);
+
+    $nuevaBurger->nombre = $req["nombre"];
+    $nuevaBurger->precio = $req["precio"];
+    $nuevaBurger->descuento = $req["descuento"];
+    $nuevaBurger->calorias = $req["calorias"];
+    $nuevaBurger->categoria_id = $req["categoria_id"];
+    $nuevaBurger->imagen = $imagenF;
+
+    $nuevaBurger->save();
+
+    return redirect('/productos')
+        ->with('status', 'Modificaste la hamburgesa exitosamente!!!')
+        ->with('operation', 'success');
+}
+
+public function delete($id)
+{
+    //buscamos la hamburgesa por su id
+    $producto = Producto::find($id);
+
+    //si tiene imagen la borro
+    $image_path = storage_path('app/public/') . $producto->imagen;
+    if ($producto->imagen && file_exists($image_path)) {
+        unlink($image_path);
+    }
+    //la elimino de la bd
+    $producto->delete();
+
+    return redirect('/productos')
+        ->with('status', 'Hamburgesa eliminada exitosamente!!!')
+        ->with('operation', 'warning');
+}
+ }

@@ -52,7 +52,7 @@ header .hamburguesa nav {
   right: -110%;
   text-align: right;
   font-size: 16px;
-  background-color: rgb(255, 199, 236);
+  background-color: rgba(255, 0, 0,0.5);
   max-height: 0;
   overflow: hidden;
 }
@@ -74,7 +74,7 @@ header nav ul li {
 }
 
 header nav ul li a{
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Anton', sans-serif;
   text-decoration: none;
   color: black;
   /* font-weight: bold; */
@@ -97,6 +97,7 @@ header nav ul li:hover {
 
 a p#marca{
   display: none;
+  font-family: 'Anton', sans-serif;
 }
 
 input#search{

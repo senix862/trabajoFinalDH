@@ -9,49 +9,43 @@
     <link rel="stylesheet" href="/css/footer.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <title>@yield('title')</title>
   </head>
   <body>
-    <div class="container">
-      <?php
-      $secciones = [
-        "Home" => "blackbird",
-        "Preguntas Frecuentes" => "faq",
-        "Contacto" => "contacto",
-        "Registrarse" => "register",
-        "Ingresar" => "login"
-      ];
-      // if (!estaElUsuarioLogeado()) {
-      //   $secciones["Registrarse"] = "registro.php";
-      //   $secciones["Ingresar"] = "login.php";
-      // } elseif (estaElUsuarioLogeado()) {
-      //   $secciones["Mi Perfil"] = "profile.php";
-      //   $secciones["Salir"] = "logout.php";
-      // }
-      ?>
-
-
-
       <header>
       <div class="hamburguesa">
-        <i class="fas fa-bars"><nav>
-          <ul>
-            <?php
-            foreach ($secciones as $seccion => $url) :?>
-              <li><a href="<?=$url?>"><?=$seccion?></a></li>
-            <?php endforeach; ?>
-          </ul>
-        </nav>
+        <i class="fas fa-hamburger">
+          <nav class="navigation">
+            <ul class="izquierdos navigation-ul">
+              <a href="listado"><li>Nuestras Burgers</li></a>
+              <a href="faq"><li>Preguntas Frecuentes</li></a>
+              <a href="contacto"><li>Contacto</li></a>
+            </ul>
+            <ul class="derechos navigation-ul">
+              <a href="/search"><li>Buscar</li></a>
+          @auth
+              <a href="lista"><li>Mi Lista</li></a>
+              <a href="{{ route('logout') }}"
+                 onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                  <li>{{ __('Logout') }}</li></a>
+          @else
+              <a href="login"><li>Ingresar</li></a>
+              <a href="register"><li>Registrarme</li></a>
+          @endauth
+            </ul>
+          </nav>
       </i>
       </div>
 
       <div class="logo">
-        <a href="index.php"><img src="/img/logo.png" alt="logo">
+        <a href="blackbird"><img src="/img/logo.png" alt="logo">
       </a>
-       <a href="index.php">
+       <a href="blackbird">
          <p id="marca">
-           BLACKBIRD
+           BLACK-BIRD
          </p>
        </a>
       </div>
@@ -75,12 +69,24 @@
 
       <div class="menuHor">
         <ul>
-          <?php
-          foreach ($secciones as $seccion => $url) :?>
-            <li>
-              <a href="<?=$url?>"><?=$seccion?></a>
-            </li>
-          <?php endforeach; ?>
+          <ul class="izquierdos navigation-ul">
+            <a href="listado"><li>Nuestras Burgers</li></a>
+            <a href="faq"><li>Preguntas Frecuentes</li></a>
+            <a href="contacto"><li>Contacto</li></a>
+          </ul>
+          <ul class="derechos navigation-ul">
+            <a href="/search"><li>Buscar</li></a>
+        @auth
+            <a href="lista"><li>Mi Lista</li></a>
+            <a href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                <li>{{ __('Logout') }}</li></a>
+        @else
+            <a href="login"><li>Ingresar</li></a>
+            <a href="register"><li>Registrarme</li></a>
+        @endauth
+          </ul>
         </ul>
       </div>
       @yield('main')
