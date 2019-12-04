@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Producto;
 use App\Categoria;
+use App\User;
 
 class ProductosController extends Controller
 {
@@ -13,7 +14,11 @@ class ProductosController extends Controller
 
     return view('index', compact('prod'));
   }
+  public function show(){
+    $productos = Producto::paginate(6);
 
+    return view('listado', compact('productos'));
+  }
   public function detalle($id){
     $producto = Producto::find($id);
 
@@ -32,8 +37,8 @@ class ProductosController extends Controller
     // $imagen = $data['imagen']->store('public');
     // $imagen= basename($imagen);
     $reglas = [
-      "nombre" => "string|required",
-      "precio" => "numeric|required",
+      "nombr" => "required|string",
+      "precio" => "required|numeric",
       "descuento" => "numeric|between:1,99",
       "calorias" => "integer|min:1",
       "categoria" => "required",
@@ -41,7 +46,7 @@ class ProductosController extends Controller
     ];
     $mesagge= [
       'required' => 'Completa este campo',
-      'title.string' => 'El titulo debe ser un texto',
+      'nombre.string' => 'El titulo debe ser un texto',
       'numeric' => 'Debe ser un numero',
       'between' => 'Debe de estar entre :min y :max',
       'integer' => 'Debe ser un numero',
@@ -53,7 +58,7 @@ class ProductosController extends Controller
     $imagen = $req->file('imagen')->store('public');
     $imagenF= basename($imagen);
 
-    $prodNuevo->nombre = $req["nombre"];
+    $prodNuevo->nombre = $req["nombr"];
     $prodNuevo->precio = $req["precio"];
     $prodNuevo->descuento = $req["descuento"];
     $prodNuevo->calorias = $req["calorias"];

@@ -6,18 +6,24 @@
   border: none;
   outline: none;
   box-sizing: border-box;
-}
 
+}
+body{
+    background-color: black;
+}
 .cuerpo{
   float: left;
   margin-top: 110px;
   min-height:  100vh;
 }
-body {
-  background-image: url(/img/burger.jpg);
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-size: cover;
+#video {
+position: absolute;
+left: 0;
+top:30%;
+width: 100%;
+height: auto;
+z-index: 1000;
+visibility: visible;
 }
 /* h1{
   text-align: center;
@@ -80,5 +86,11 @@ a.ver-categoria {
 
     div.photo-container {
       width: 31.3%;
+    }
+    #video{
+      left: 0;
+      top: 0;
+      width: auto;
+      height: 100vh;
     }
   }

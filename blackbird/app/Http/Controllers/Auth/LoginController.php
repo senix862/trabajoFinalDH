@@ -9,7 +9,7 @@ class LoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Login Controller vjgirm  
+    | Login Controller vjgirm
     |--------------------------------------------------------------------------
     |
     | This controller handles authenticating users for the application and
@@ -35,5 +35,8 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    public function show(){
+      return view("login");
     }
 }

@@ -1,5 +1,5 @@
 header{
-  background-color: rgb(255, 199, 236);
+  background-color: black;
   width: 100%;
   position: fixed;
   z-index: 2;
@@ -15,7 +15,7 @@ header .carrito{
 
  .carrito a{
   font-size: 20px;
-    color:black;
+    color:white;
     text-decoration: none;
     position: absolute;
     top: 11px;
@@ -38,6 +38,7 @@ header .hamburguesa{
 }
 
 header .hamburguesa i{
+  color:white;
   position: absolute;
   right: 5%;
   margin-top:16px;
@@ -52,7 +53,7 @@ header .hamburguesa nav {
   right: -110%;
   text-align: right;
   font-size: 16px;
-  background-color: rgba(255, 0, 0,0.5);
+  background-color: rgba(255, 255, 255,0.5);
   max-height: 0;
   overflow: hidden;
 }

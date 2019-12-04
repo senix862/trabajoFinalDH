@@ -13,12 +13,12 @@
   @endsection
 
 @section('main')
-  <form class="" action="" method="post" enctype="multipart/form-data">
-    {{csrf_field()}}
+  <form class="" action="/products/nuevo" method="post" enctype="multipart/form-data">
+    @csrf
     <div class="form-group">
-      <label for="nombre">Producto:</label>
-      <input type="text" class="form-control @error('nombre') is-invalid @enderror" id="nombre" name="nombre" value="{{old('nombre')}}">
-      @error('nombre')
+      <label for="nombr">Hamburguesa:</label>
+      <input type="text" class="form-control @error('nombr') is-invalid @enderror" id="nombr" name="nombr" value="{{old('nombr')}}">
+      @error('nombr')
           {{ $message }}
       @enderror
     </div>
@@ -46,7 +46,7 @@
     <div class="form-group">
       <label for="categoria_id">Categoria: </label>
       <select class="form-control" name="categoria_id" id="categoria_id">
-        <option value="">Elije una</option>
+        <option value="">Elije una categoria</option>
     @foreach ($categorias as $categoria)
         <option value="{{$categoria->id}}" @if($categoria->id == old('categoria_id')) selected @endif>{{$categoria->nombre}}</option>
     @endforeach
@@ -64,7 +64,10 @@
       @enderror
     </div>
 
-    <a class="btn btn-secondary" href="/movies/">Volver</a>
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a class="btn btn-secondary" href="/blackbird">Volver</a>
+    <button type="submit" class="btn btn-primary" >Guardar</button>
   </form>
+  @php
+  var_dump($errors->all());
+  @endphp
 @endsection

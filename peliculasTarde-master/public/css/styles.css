@@ -19,13 +19,13 @@
     color: #000;
 }
 
-.fondo-peli {
+.fondo-bur {
     max-height: 100%;
     max-width: 100%;
     position: absolute;
     opacity: 0.3;
     z-index: 1;
 }
-.fondo-peli img{
+.fondo-bur img{
     margin: auto;
 }

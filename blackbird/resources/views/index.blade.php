@@ -13,6 +13,7 @@
   @endsection
 
 @section('main')
+  <iframe  height="100%" src="https://www.youtube.com/embed/y8zgASDGeo4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   @foreach($prod as $producto)
     <section class="productos">
       <article>

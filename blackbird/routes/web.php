@@ -19,14 +19,14 @@ Route::get('/blackbird','ProductosController@listado');
 
 Route::get('/productos/{id}', 'ProductosController@detalle');
 Route::get('/productos/{id}/editar',"ProductosController@edit");
-Route::patch('/Productos/{id}', 'ProductosController@update');
+Route::patch('/productos/{id}', 'ProductosController@update');
 Route::delete('/productos/{id}', 'ProductosController@delete');
 
 Route::get('/productos', 'ProductosController@show');
 
 Route::get('/products/nuevo', 'ProductosController@new');
 
-Route::post('/productos/nuevo', 'ProductosController@agregar');
+Route::post('/products/nuevo', 'ProductosController@agregar');
 
 Route::get('/faq', function () {
     return view('faq');

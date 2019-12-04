@@ -1,4 +1,4 @@
-@extends('movies_layout')
+@extends('layout')
 
 @section('css')
 <link rel="stylesheet" href="/css/styles.css">
@@ -7,27 +7,27 @@
 @section('main')
 
 <section class="principal">
-   <article class="nuevas" id="peliculas">
-       <div class="peliculas">
+   <article class="nuevas" id="hamburguesas">
+       <div class="hamburguesas">
           <div class="titulo-nav">
-               <h3>Peliculas en Digital Movies</h3>
+               <h3>Hamburguesas en Black-Bird</h3>
                <div>
-             @if(Auth::user()->admin)
-                 <a href="/movies/new" class="btn btn-primary">Nueva</a>
-             @endif
+             {{-- @if(Auth::user()->admin)
+                 <a href="productos/nuevo" class="btn btn-primary">Nueva Burger</a>
+             @endif --}}
                </div>
          </div>
          <div class="sub-titulo">
              <div class="ordenamiento">
                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="?orden=title">Titulo</a></li>
-                <li class="breadcrumb-item"><a href="?orden=genero">Genero</a></li>
-                <li class="breadcrumb-item "><a href="?orden=rating">Rating</a></li>
-                <li class="breadcrumb-item active"><a href="?orden=awards">Awards</a></li>
+                <li class="breadcrumb-item"><a href="?orden=title">Nombre</a></li>
+                <li class="breadcrumb-item"><a href="?orden=genero">Categoria</a></li>
+                <li class="breadcrumb-item "><a href="?orden=rating">Precio</a></li>
+                <li class="breadcrumb-item active"><a href="?orden=awards">Calorias</a></li>
               </ol>
              </div>
              <nav >
-                 {{$pelis->links()}}
+                 {{$productos->links()}}
              </nav>
          </div>
 
@@ -41,18 +41,18 @@
 
          <div class="card-group">
 
-@foreach ($pelis as $peli)
+@foreach ($productos as $producto)
 
     <div class="card card-peli">
-      <img class="fondo-peli" src="images/default.png">
-      <div class="card-header">{{ $peli->title }}</div>
+      <img class="fondo-bur" src="/storage/{{$producto->imagen}}">
+      <div class="card-header">{{ $producto->nombre }}</div>
       <div class="card-body">
-        <p class="card-text">{{ $peli->getGenreName() }}</p>
-        <p class="card-text">Rating: {{  $peli->rating }}</p>
-        <p class="card-text">Awards: {{  $peli->awards }}</p>
+        <p class="card-text">{{ $producto->getCategoriaName() }}</p>
+        <p class="card-text">Rating: {{  $producto->calorias }}</p>
+        <p class="card-text">Awards: {{  $producto->precio }}</p>
         <p class="card-text">
-          <a class="btn btn-primary" href="/movies/{{$peli->id}}">Ver Mas</a>
-          <a class="btn btn-success" href="/movies/{{$peli->id}}/edit">Editar</a>
+          <a class="btn btn-primary" href="/productos/{{$producto->id}}">Ver Mas</a>
+          <a class="btn btn-success" href="/productos/{{$producto->id}}/editar">Editar</a>
           </p>
       </div>
     </div>
