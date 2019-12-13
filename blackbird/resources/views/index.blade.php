@@ -5,7 +5,7 @@
   @endsection
 
   @section('title')
-    Blackbird - Joyas y Bijouterie
+    Burger
   @endsection
 
   @section('texto')
@@ -18,7 +18,7 @@
     <section class="productos">
       <article>
         <div class="photo-container">
-          <img class="foto" src="/storage/{{$producto->imagen}}" alt="">
+          <img class="foto" src="/public/{{$producto->imagen}}" alt="">
           <a class="ver-categoria" href="">{{$producto->nombre}}</a>
         </div>
       </article>

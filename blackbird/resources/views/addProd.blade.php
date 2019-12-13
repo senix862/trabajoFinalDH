@@ -13,34 +13,42 @@
   @endsection
 
 @section('main')
-  <form class="" action="/products/nuevo" method="post" enctype="multipart/form-data">
+  <form class="" id="Este" action="/products/nuevo" method="post" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
       <label for="nombr">Hamburguesa:</label>
       <input type="text" class="form-control @error('nombr') is-invalid @enderror" id="nombr" name="nombr" value="{{old('nombr')}}">
       @error('nombr')
-          {{ $message }}
+        <span class='invalid-feedback' role='alert'>
+          <strong>{{ $message }}</strong>
+        </span>
       @enderror
     </div>
     <div class="form-group">
       <label for="precio">Precio:</label>
-      <input type="number" min="1" step="any" class="form-control " id="precio" name="precio" value="{{old('precio')}}">
+      <input type="number" min="1" step="any" class="form-control  @error('precio') is-invalid @enderror" id="precio" name="precio" value="{{old('precio')}}">
       @error('precio')
-          {{ $message }}
+        <span class='invalid-feedback' role='alert'>
+          <strong>{{ $message }}</strong>
+        </span>
       @enderror
     </div>
     <div class="form-group">
       <label for="descuento">Porcentaje de descuento: </label>
-      <input type="number" min="0" step="any" class="form-control" id="descuento" name="descuento"  value="{{old('descuento')}}">
+      <input type="number" min="0" step="1" class="form-control @error('descuento') is-invalid @enderror" id="descuento" name="descuento"  value="{{old('descuento')}}">
       @error('descuento')
-          {{ $message }}
+        <span class='invalid-feedback' role='alert'>
+          <strong>{{ $message }}</strong>
+        </span>
       @enderror
     </div>
     <div class="form-group">
       <label for="calorias">Calorias: </label>
-      <input type="number" min="0" step="any" class="form-control" id="calorias" name="calorias"  value="{{old('calorias')}}">
+      <input type="number" min="0" step="any" class="form-control @error('calorias') is-invalid @enderror" id="calorias" name="calorias"  value="{{old('calorias')}}">
       @error('calorias')
-          {{ $message }}
+        <span class='invalid-feedback' role='alert'>
+          <strong>{{ $message }}</strong>
+        </span>
       @enderror
     </div>
     <div class="form-group">
@@ -55,7 +63,15 @@
           {{ $message }}
       @enderror
     </div>
-
+    <div class="form-group">
+      <label for="ingredientes">Descripción: </label>
+      <input type="string" class="form-control @error('ingredientes') is-invalid @enderror" id="ingredientes" name="ingredientes"  value="{{old('ingredientes')}}">
+      @error('ingredientes')
+        <span class='invalid-feedback' role='alert'>
+          <strong>{{ $message }}</strong>
+        </span>
+      @enderror
+    </div>
     <div class="form-group">
       <label for="imagen">Imagen: </label>
       <input type="file" id="imagen" name="imagen">
@@ -70,4 +86,7 @@
   @php
   var_dump($errors->all());
   @endphp
+  <script type="text/javascript" src='/js/addProd.js'>
+
+  </script>
 @endsection

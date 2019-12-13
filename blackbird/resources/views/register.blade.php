@@ -5,7 +5,7 @@
   @endsection
 
   @section('title')
-    Blackbird - Joyas y Bijouterie
+    Burger - Registro
   @endsection
 
   @section('texto')
@@ -100,7 +100,7 @@
             <button id="registro" type="submit" name="button">Registro</button>
                       </form>
 @php
-var_dump($errors->all());
+
 @endphp
 
   @endsection

@@ -28,10 +28,10 @@
           @auth
               <a href="lista"><li>Mi Lista</li></a>
               <a href="perfil"><li>Mi Perfil</li></a>
-              <a href="{{ route('logout') }}"
-                 onclick="event.preventDefault();
-                               document.getElementById('logout-form').submit();">
-                  <li>{{ __('Logout') }}</li></a>
+              <form id="logout-form" action="{{ route('logout') }}" method="post" style="display:none">
+                @csrf
+              </form>
+
           @else
               <a href="login"><li>Ingresar</li></a>
               <a href="register"><li>Registrarme</li></a>
@@ -42,11 +42,11 @@
       </div>
 
       <div class="logo">
-        <a href="blackbird"><img src="/img/logo.png" alt="logo">
+        <a href="burger"><img src="/img/logo.png" alt="logo">
       </a>
-       <a href="blackbird">
+       <a href="burger">
          <p id="marca">
-           BURGER
+           BU
          </p>
        </a>
       </div>
@@ -116,4 +116,3 @@
 
       </footer>
       <a id="volver" href="#"><i class="fas fa-arrow-circle-up"></i></a>
-    

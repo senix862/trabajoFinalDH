@@ -39,10 +39,11 @@ class ProductosController extends Controller
     $reglas = [
       "nombr" => "required|string",
       "precio" => "required|numeric",
-      "descuento" => "numeric|between:1,99",
-      "calorias" => "integer|min:1",
-      "categoria" => "required",
-      "imagen"=> "file"
+      "descuento" => "numeric|between:0,99",
+      "calorias" => "integer|min:0",
+      "categoria_id" => "required",
+      "imagen"=> "required|file",
+      "ingredientes" => "required|string"
     ];
     $mesagge= [
       'required' => 'Completa este campo',
@@ -55,8 +56,11 @@ class ProductosController extends Controller
     $this->validate($req, $reglas, $mesagge);
 
     $prodNuevo = new Producto;
-    $imagen = $req->file('imagen')->store('public');
-    $imagenF= basename($imagen);
+    $imagenF = '';
+    if ($req->file('imagen')) {
+      $imagen = $req->file('imagen')->store('public');
+      $imagenF= basename($imagen);
+    }
 
     $prodNuevo->nombre = $req["nombr"];
     $prodNuevo->precio = $req["precio"];
@@ -64,6 +68,7 @@ class ProductosController extends Controller
     $prodNuevo->calorias = $req["calorias"];
     $prodNuevo->categoria_id = $req["categoria_id"];
     $prodNuevo->imagen = $imagenF;
+    $prodNuevo->ingredientes = $req["ingredientes"];
 
     $prodNuevo->save();
 
@@ -81,16 +86,17 @@ public function edit($id)
     return view('editarProducto', compact(['producto', 'categorias']));
 }
 
-public function update(Request $request, $id)
+public function update(Request $req, $id)
 {
-    //primero valido los datos
+    //primero valido lo datos
     $reglas = [
-      "nombre" => "string|required",
-      "precio" => "numeric|required",
-      "descuento" => "numeric|between:1,99",
-      "calorias" => "integer|min:1",
-      "categoria" => "required",
-      "imagen"=> "file"
+      "nombr" => "required|string",
+      "precio" => "required|numeric",
+      "descuento" => "numeric|between:0,99",
+      "calorias" => "integer|min:0",
+      "categoria_id" => "required",
+      "imagen"=> "required|file",
+      "ingredientes" => "required|string"
     ];
     $mesagge= [
       'required' => 'Completa este campo',
@@ -98,25 +104,29 @@ public function update(Request $request, $id)
       'numeric' => 'Debe ser un numero',
       'between' => 'Debe de estar entre :min y :max',
       'integer' => 'Debe ser un numero',
-
     ];
     $this->validate($req, $reglas, $mesagge);
-
+    $imagenF = '';
+    if ($req->file('imagen')) {
+      $imagen = $req->file('imagen')->store('public');
+      $imagenF= basename($imagen);
+    }
     $nuevaBurger = Producto::find($id);
     $imagen = $req->file('imagen')->store('public');
     $imagenF= basename($imagen);
 
-    $nuevaBurger->nombre = $req["nombre"];
+    $nuevaBurger->nombre = $req["nombr"];
     $nuevaBurger->precio = $req["precio"];
     $nuevaBurger->descuento = $req["descuento"];
     $nuevaBurger->calorias = $req["calorias"];
     $nuevaBurger->categoria_id = $req["categoria_id"];
     $nuevaBurger->imagen = $imagenF;
+    $nuevaBurger->ingredientes = $req["ingredientes"];
 
     $nuevaBurger->save();
 
     return redirect('/productos')
-        ->with('status', 'Modificaste la hamburgesa exitosamente!!!')
+        ->with('status', 'Modificaste la hamburguesa exitosamente!!!')
         ->with('operation', 'success');
 }
 

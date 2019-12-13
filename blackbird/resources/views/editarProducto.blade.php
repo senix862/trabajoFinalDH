@@ -13,8 +13,8 @@
                 @method('patch')
                 <div class="form-group">
                   <label for="nombre">Nombre: </label>
-                  <input type="text" class="form-control @error('nombre') is-invalid @enderror" id="nombre" name="nombre" value="{{old('nombre', $producto->nombre)}}">
-                  @error('nombre')
+                  <input type="text" class="form-control @error('nombr') is-invalid @enderror" id="nombre" name="nombr" value="{{old('nombr', $producto->nombre)}}">
+                  @error('nombr')
                       {{ $message }}
                   @enderror
                 </div>
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="categoria_id">Genero</label>
+                  <label for="categoria_id">Categoría:</label>
                   <select class="form-control" name="categoria_id" id="categoria_id">
                     <option value="">Elije uno</option>
                 @foreach ($categorias as $categoria)
@@ -52,14 +52,23 @@
                       {{ $message }}
                   @enderror
                 </div>
-
+                <div class="form-group">
+                  <label for="ingredientes">Descripción: </label>
+                  <input type="string" class="form-control @error('ingredientes') is-invalid @enderror" id="ingredientes" name="ingredientes"  value="{{old('ingredientes')}}">
+                  @error('ingredientes')
+                    <span class='invalid-feedback' role='alert'>
+                      <strong>{{ $message }}</strong>
+                    </span>
+                  @enderror
+                </div>
                 <div class="form-group">
                   <label for="imagen">Imagen: </label>
                   <img src="/storage/{{$producto->imagen}}" alt="" width="100%">
-                  Para cambiar seleccione un nuevo archivo
                   <input type="file" id="imagen" name="imagen">
                   @error('imagen')
-                      {{ $message }}
+                    <span class='invalid-feedback' role='alert'>
+                      <strong>{{ $message }}</strong>
+                    </span>
                   @enderror
                 </div>
                 <a class="btn btn-secondary" href="/productos/">Volver</a>

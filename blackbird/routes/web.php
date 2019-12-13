@@ -11,37 +11,29 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/blackbird','ProductosController@listado');
-
-Route::get('/productos/{id}', 'ProductosController@detalle');
-Route::get('/productos/{id}/editar',"ProductosController@edit");
-Route::patch('/productos/{id}', 'ProductosController@update');
-Route::delete('/productos/{id}', 'ProductosController@delete');
+Route::get('/burger','ProductosController@listado');
 
 Route::get('/productos', 'ProductosController@show');
+Route::get('/products/nuevo', 'ProductosController@new')->middleware(['auth', 'is_admin']);
+Route::post('/products/nuevo', 'ProductosController@agregar')->middleware(['auth', 'is_admin']);
 
-Route::get('/products/nuevo', 'ProductosController@new');
+Route::get('/productos/{id}', 'ProductosController@detalle')->middleware(['auth']);
+Route::get('/productos/{id}/editar',"ProductosController@edit")->middleware(['auth', 'is_admin']);
+Route::patch('/productos/{id}', 'ProductosController@update')->middleware(['auth', 'is_admin']);
+Route::delete('/productos/{id}', 'ProductosController@delete')->middleware(['auth', 'is_admin']);
 
-Route::post('/products/nuevo', 'ProductosController@agregar');
+Route::get('/carrito', 'CarritoController@index')->middleware(['auth']);
+Route::post('/carrito/{id}', 'CarritoController@agregar')->middleware(['auth']);
+
+
+
 
 Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/register', function () {
-    return view('welcome');
-});
-
-Route::post('/register', function () {
-    return view('welcome');
-});
-
-Route::get('/login', function () {
-    return view('login');
+Route::get('/registrocompleto', function () {
+    return view('registrocompleto');
 });
 
 Route::get('/contacto', function () {
@@ -54,4 +46,4 @@ Route::post('/profile', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
