@@ -28,6 +28,7 @@
           @auth
               <a href="lista"><li>Mi Lista</li></a>
               <a href="perfil"><li>Mi Perfil</li></a>
+              <a href="addProd"><li>Agregar Producto</li></a>
               <form id="logout-form" action="{{ route('logout') }}" method="post" style="display:none">
                 @csrf
               </form>
@@ -42,11 +43,11 @@
       </div>
 
       <div class="logo">
-        <a href="burger"><img src="/img/logo.png" alt="logo">
-      </a>
+        {{-- <a href="burger"><img src="/img/logo.png" alt="logo">
+      </a> --}}
        <a href="burger">
          <p id="marca">
-           BU
+           DIGIBURGER
          </p>
        </a>
       </div>

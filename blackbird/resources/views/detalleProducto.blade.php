@@ -14,11 +14,6 @@
 
   @section('main')
 
-  <div class="row">
-  <div class="col-md-6 offset-md-3">
-    <article class="nuevas" id="peliculas">
-        <div class="peliculas">
-
               <h2>{{$producto->nombre}}</h2>
               <img src="/storage/{{$producto->imagen}}" alt="" width="100%">
                   <div class="form-group">
@@ -51,11 +46,4 @@
                           <button type="submit" class="btn btn-danger" name="button">Eliminar</button>
                       </form>
                   </div>
-
-        </div>
-
-    </article>
-  </div>
-  </div>
-
   @endsection
