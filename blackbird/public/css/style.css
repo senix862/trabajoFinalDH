@@ -16,6 +16,44 @@ body{
   margin-top: 110px;
   min-height:  100vh;
 }
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+/*Estilo del boton*/
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+/*
 #video {
 position: absolute;
 left: 0;
@@ -24,7 +62,7 @@ width: 100%;
 height: auto;
 z-index: 1000;
 visibility: visible;
-}
+}*/
 /* h1{
   text-align: center;
   width: 85%;
