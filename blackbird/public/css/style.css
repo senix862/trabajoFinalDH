@@ -10,12 +10,61 @@
 }
 body{
     background-color: white;
+    overflow-x: hidden;
 }
 .cuerpo{
   float: left;
   margin-top: 110px;
   min-height:  100vh;
 }
+.productos{
+  margin-top: 20px;
+}
+.container{
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+/*Estilo del boton*/
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+/*
 #video {
 position: absolute;
 left: 0;
@@ -24,7 +73,7 @@ width: 100%;
 height: auto;
 z-index: 1000;
 visibility: visible;
-}
+}*/
 /* h1{
   text-align: center;
   width: 85%;
@@ -45,7 +94,7 @@ div.photo-container {
   width: 98%;
   margin-left: 1%;
   margin-right: 1%;
-  margin-top: 5px;
+  margin-top: 110px;
   padding: 10px;
 }
 
@@ -85,7 +134,7 @@ a.ver-categoria {
   @media (min-width:1024px) {
 
     div.photo-container {
-      width: 31.3%;
+      width: 25%;
     }
     #video{
       left: 0;

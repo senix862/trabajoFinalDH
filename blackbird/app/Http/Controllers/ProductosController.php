@@ -11,8 +11,7 @@ class ProductosController extends Controller
 {
   public function listado(){
     $prod = Producto::all();
-
-    return view('index', compact('prod'));
+    return view('indexVideo', compact('prod'));
   }
   public function show(){
     $productos = Producto::paginate(6);

@@ -26,7 +26,9 @@ Route::get('/carrito', 'CarritoController@index')->middleware(['auth']);
 Route::post('/carrito/{id}', 'CarritoController@agregar')->middleware(['auth']);
 
 
-
+Route::get('/indexVideo', function () {
+    return view('indexVideo');
+});
 
 Route::get('/faq', function () {
     return view('faq');
