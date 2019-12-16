@@ -13,12 +13,13 @@
   @endsection
 
 @section('main')
-  <iframe  height="100%" src="https://www.youtube.com/embed/y8zgASDGeo4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   @foreach($prod as $producto)
     <section class="productos">
       <article>
         <div class="photo-container">
-          <img class="foto" src="/storage/{{$producto->imagen}}" alt="">
+          <div class="glitch-pic">
+            <img class="foto" src="/storage/{{$producto->imagen}}" alt="">
+          </div>
           <a class="ver-categoria" href="">{{$producto->nombre}}</a>
         </div>
       </article>
