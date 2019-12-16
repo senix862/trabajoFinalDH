@@ -30,6 +30,10 @@ Route::get('/indexVideo', function () {
     return view('indexVideo');
 });
 
+Route::get('/productosCate', function () {
+    return view('productosCate');
+});
+
 Route::get('/faq', function () {
     return view('faq');
 });
