@@ -22,10 +22,8 @@
   </head>
   <body>
 <<<<<<< HEAD
-    <video autoplay muted loop id="myVideo">
-      <source src="/img/burger2.mp4" type="video/mp4">
-    </video>
-=======
+
+<!--
     {{-- <video autoplay muted loop id="myVideo">
       <source src="/img/burger.mp4" type="video/mp4">
     </video> --}}
@@ -33,6 +31,7 @@
     <div class="content">
       <button id="myBtn">ABAJO</button>
     </div>
+  -->
       <header>
       <div class="hamburguesa">
         <i class="fas fa-hamburger">

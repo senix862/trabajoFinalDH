@@ -8,6 +8,7 @@
     Burger
   @endsection
 
+
   @section('texto')
     Productos Destacados
   @endsection
