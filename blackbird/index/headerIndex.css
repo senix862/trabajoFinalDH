@@ -6,12 +6,12 @@ body{
   margin: 0;
   font-family: Verdana;
   font-size: 1rem;
-  line-height: 1.5;
+  /* line-height: 1.5; */
   color: #3333;
   overflow-x: hidden;
 }
 
-/*
+
 #myVideo {
   position: fixed;
   right: 0;
@@ -42,7 +42,7 @@ body{
 #myBtn:hover {
   background: #ddd;
   color: black;
-} */
+}
 
 .vid-header{
   height: 100vh;
@@ -52,7 +52,7 @@ body{
 }
 
 .container{
-  max-width: 1080px;
+  width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
@@ -67,8 +67,7 @@ body{
   height: 100vh;
   overflow: hidden;
 }
-
-.fullscreen-video video{
+ .fullscreen-video video{
   min-width: 100%;
   min-height: 100%;
 }

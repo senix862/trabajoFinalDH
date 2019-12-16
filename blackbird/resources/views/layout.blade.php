@@ -2,6 +2,7 @@
 <html lang="es" dir="ltr">
   <head>
     <link rel="stylesheet" href="css/fontawesome//css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       @yield('css')
     <!-- Menu Rotativo -->
@@ -20,9 +21,15 @@
     <title>@yield('title')</title>
   </head>
   <body>
+<<<<<<< HEAD
     <video autoplay muted loop id="myVideo">
       <source src="/img/burger2.mp4" type="video/mp4">
     </video>
+=======
+    {{-- <video autoplay muted loop id="myVideo">
+      <source src="/img/burger.mp4" type="video/mp4">
+    </video> --}}
+>>>>>>> ced2612b2f8359b874a980bda53c8f8b6a628480
     <div class="content">
       <button id="myBtn">ABAJO</button>
     </div>
@@ -120,6 +127,7 @@
       </div>
       -->
       @yield('main')
+
       <footer>
         <section class="newsletter-redesSociales">
           <!-- Redes Sociales -->
