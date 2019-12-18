@@ -19,8 +19,19 @@
     <title>@yield('title')</title>
   </head>
   <body>
+<<<<<<< HEAD
 
       <header id="menu">
+=======
+    {{-- <video autoplay muted loop id="myVideo">
+      <source src="/img/burger.mp4" type="video/mp4">
+    </video> --}}
+    <div class="content">
+      <button id="myBtn">ABAJO</button>
+    </div>
+  -->
+      <header>
+>>>>>>> bfc503c2803776cb55fc273ebd90ac7ad65c0182
       <div class="hamburguesa">
         <i class="fas fa-hamburger">
           <nav class="navigation">
@@ -58,6 +69,7 @@
        </a>
       </div>
 
+<<<<<<< HEAD
         {{-- <div class="component">
           <button class="cn-button" id="cn-button">Burger</button>
           <div class="cn-wrapper" id="cn-wrapper">
@@ -72,6 +84,8 @@
           </div> --}}
           <!-- End of Nav Structure -->
         </div>
+=======
+>>>>>>> bfc503c2803776cb55fc273ebd90ac7ad65c0182
       <!-- barra de busqueda
       {{-- <div class="active-purple-3 active-purple-4 mb-4">
       <input id="search"class="form-control" type="text" placeholder="Search" aria-label="Search">
@@ -138,6 +152,21 @@
 
       </footer>
       <a id="volver" href="#"><i class="fas fa-arrow-circle-up"></i></a>
-
+      <div class="container">
+        <div class="component">
+          <button class="cn-button" id="cn-button">Burger</button>
+          <div class="cn-wrapper" id="cn-wrapper">
+            <ul>
+              <li><a href="burger"><span><i class="fas fa-home"></i></span></a></li>
+              <li><a href="/productos"><span><i class="fas fa-hamburger"></i></span></a></li>
+              <li><a href="/faq"><span><i class="fas fa-question"></i></span></a></li>
+              <li><a href="#"><i class="fas fa-user-alt"></i></i></a></li>
+              <li><a href="/lista"><span><i class="fas fa-heart"></i></span></a></li>
+              <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">"><i class="fas fa-sign-out-alt"></i></a></li>
+             </ul>
+          </div>
+          <!-- End of Nav Structure -->
+        </div>
+      </div><!-- /container -->
       <script src="/js/polyfills.js"></script>
       <script src="/js/demo2.js"></script>
