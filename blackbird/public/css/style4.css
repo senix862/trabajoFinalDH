@@ -68,15 +68,15 @@
 	backface-visibility: hidden;
 }
 .ch-img-1 {
-	background-image: url('/storage/completaxs.jpg');
+	background-image: url('/img/completaxs.jpg');
 }
 
 .ch-img-2 {
-	background-image: url('/storage/corderoxs.jpg');
+	background-image: url('/img/corderoxs.jpg');
 }
 
 .ch-img-3 {
-	background-image: url('/storage/quesoxs.jpg');
+	background-image: url('/img/quesoxs.jpg');
 }
 .ch-info .ch-info-back {
 	-webkit-transform: rotate3d(0,1,0,180deg);

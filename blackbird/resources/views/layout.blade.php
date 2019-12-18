@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
-    <link rel="stylesheet" href="css/fontawesome//css/all.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       @yield('css')
@@ -9,8 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="/css/component2.css" />
-    <script src="/js/modernizr-2.6.2.min.js"></script>
     <!-- Fin Menu Rotativo -->
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
@@ -21,19 +19,8 @@
     <title>@yield('title')</title>
   </head>
   <body>
-<<<<<<< HEAD
-    <video autoplay muted loop id="myVideo">
-      <source src="/img/burger2.mp4" type="video/mp4">
-    </video>
-=======
-    {{-- <video autoplay muted loop id="myVideo">
-      <source src="/img/burger.mp4" type="video/mp4">
-    </video> --}}
->>>>>>> ced2612b2f8359b874a980bda53c8f8b6a628480
-    <div class="content">
-      <button id="myBtn">ABAJO</button>
-    </div>
-      <header>
+
+      <header id="menu">
       <div class="hamburguesa">
         <i class="fas fa-hamburger">
           <nav class="navigation">
@@ -71,8 +58,7 @@
        </a>
       </div>
 
-      <div class="container">
-        <div class="component">
+        {{-- <div class="component">
           <button class="cn-button" id="cn-button">Burger</button>
           <div class="cn-wrapper" id="cn-wrapper">
             <ul>
@@ -83,10 +69,9 @@
               <li><a href="/lista"><span><i class="fas fa-heart"></i></span></a></li>
               <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">"><i class="fas fa-sign-out-alt"></i></a></li>
              </ul>
-          </div>
+          </div> --}}
           <!-- End of Nav Structure -->
         </div>
-      </div><!-- /container -->
       <!-- barra de busqueda
       {{-- <div class="active-purple-3 active-purple-4 mb-4">
       <input id="search"class="form-control" type="text" placeholder="Search" aria-label="Search">
